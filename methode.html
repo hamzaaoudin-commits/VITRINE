@@ -8,17 +8,24 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div class="grid-backdrop"></div>
 
 <nav class="topnav">
   <div class="topnav-inner">
     <a href="index.html" class="brand-mark">VITRINE<span>.</span></a>
     <div class="nav-links">
-      <a href="index.html">Accueil</a>
-      <a href="bibliotheque.html">Bibliothèque</a>
-      <a href="methode.html" class="active">Méthode</a>
-      <a href="abonnement.html">Abonnement</a>
+      <a href="index.html" data-i18n="nav.home">Accueil</a>
+      <a href="bibliotheque.html" data-i18n="nav.library">Bibliothèque</a>
+      <a href="methode.html" class="active" data-i18n="nav.method">Méthode</a>
+      <a href="abonnement.html" data-i18n="nav.pricing">Abonnement</a>
     </div>
-    <a href="abonnement.html" class="nav-cta">S'abonner</a>
+    <div style="display:flex; align-items:center; gap:14px;">
+      <div class="lang-toggle">
+        <button data-lang="fr">FR</button>
+        <button data-lang="en">EN</button>
+      </div>
+      <a href="abonnement.html" class="nav-cta" data-i18n="nav.cta"><span class="fill"></span>S'abonner</a>
+    </div>
   </div>
 </nav>
 
@@ -26,50 +33,52 @@
 
   <div class="masthead">
     <div class="kicker">
-      <span>Méthode</span>
-      <span>La grille de lecture</span>
+      <span data-i18n="meth.kicker1">Méthode</span>
+      <span data-i18n="meth.kicker2">La grille de lecture</span>
     </div>
-    <h1>La même grille,<br>appliquée chaque<br>semaine.</h1>
-    <p class="baseline">VITRINE n'enseigne rien frontalement. La méthode se transmet par répétition : la même structure, appliquée à des marques différentes, semaine après semaine.</p>
+    <h1 data-i18n="meth.h1">La même grille,<br>appliquée chaque<br>semaine.</h1>
+    <p class="baseline" data-i18n="meth.baseline">VITRINE n'enseigne rien frontalement. La méthode se transmet par répétition : la même structure, appliquée à des marques différentes, semaine après semaine.</p>
   </div>
 
-  <div class="sec">
-    <div class="sec-head"><span class="sec-num">01</span><span class="sec-title">Trois questions, toujours les mêmes</span></div>
+  <div class="sec reveal">
+    <div class="sec-head"><span class="sec-num" data-i18n="meth.s1.num">01</span><span class="sec-title" data-i18n="meth.s1.title">Trois questions, toujours les mêmes</span></div>
     <ul class="tl">
-      <li><p><strong>Ce qui marche.</strong> Le point de positionnement réellement net — la chose que la marque a tranchée, et qu'elle tient sans dévier.</p></li>
-      <li><p><strong>Ce qui est flou.</strong> La contradiction ou la zone non résolue : ce que la marque dit d'un côté, et contredit de l'autre.</p></li>
-      <li><p><strong>Comment je repositionnerais.</strong> Une direction tranchée — pas une liste de recommandations, une seule décision nette.</p></li>
+      <li><p><strong data-i18n="meth.t1.b">Ce qui marche.</strong><span data-i18n="meth.t1.p"> Le point de positionnement réellement net — la chose que la marque a tranchée, et qu'elle tient sans dévier.</span></p></li>
+      <li><p><strong data-i18n="meth.t2.b">Ce qui est flou.</strong><span data-i18n="meth.t2.p"> La contradiction ou la zone non résolue : ce que la marque dit d'un côté, et contredit de l'autre.</span></p></li>
+      <li><p><strong data-i18n="meth.t3.b">Comment je repositionnerais.</strong><span data-i18n="meth.t3.p"> Une direction tranchée — pas une liste de recommandations, une seule décision nette.</span></p></li>
     </ul>
   </div>
 
-  <div class="sec">
-    <div class="sec-head"><span class="sec-num">02</span><span class="sec-title">Pourquoi ce format, et pas un autre</span></div>
+  <div class="sec reveal">
+    <div class="sec-head"><span class="sec-num" data-i18n="meth.s2.num">02</span><span class="sec-title" data-i18n="meth.s2.title">Pourquoi ce format, et pas un autre</span></div>
     <div class="duo">
       <div>
-        <span class="label">Pas un audit complet</span>
-        <p>Une fiche VITRINE n'a pas l'exhaustivité d'un audit de marque payant. Elle prend dix minutes à lire et laisse une impression nette — c'est la clarté du regard qui compte, pas la couverture du sujet.</p>
+        <span class="label" data-i18n="meth.l1">Pas un audit complet</span>
+        <p data-i18n="meth.p1">Une fiche VITRINE n'a pas l'exhaustivité d'un audit de marque payant. Elle prend dix minutes à lire et laisse une impression nette — c'est la clarté du regard qui compte, pas la couverture du sujet.</p>
       </div>
       <div>
-        <span class="label">Pas un cours</span>
-        <p>Aucune fiche n'explique la méthode en théorie. Elle l'applique, point. C'est en la voyant tourner sur des dizaines de cas que la grille de lecture s'installe chez le lecteur.</p>
+        <span class="label" data-i18n="meth.l2">Pas un cours</span>
+        <p data-i18n="meth.p2">Aucune fiche n'explique la méthode en théorie. Elle l'applique, point. C'est en la voyant tourner sur des dizaines de cas que la grille de lecture s'installe chez le lecteur.</p>
       </div>
     </div>
   </div>
 
-  <div class="sec">
-    <div class="sec-head"><span class="sec-num">03</span><span class="sec-title">D'où vient cette grille</span></div>
-    <p class="wide">C'est la même méthodologie que celle utilisée dans les missions Strawberry Production — la méthode S.T.R.A.W., appliquée habituellement à des marques clientes en commission privée. VITRINE l'applique en public, à des marques que vous connaissez déjà, sans qu'aucune d'elles n'ait commandé l'analyse.</p>
+  <div class="sec reveal">
+    <div class="sec-head"><span class="sec-num" data-i18n="meth.s3.num">03</span><span class="sec-title" data-i18n="meth.s3.title">D'où vient cette grille</span></div>
+    <p class="wide" data-i18n="meth.s3.p">C'est la même méthodologie que celle utilisée dans les missions Strawberry Production — la méthode S.T.R.A.W., appliquée habituellement à des marques clientes en commission privée. VITRINE l'applique en public, à des marques que vous connaissez déjà, sans qu'aucune d'elles n'ait commandé l'analyse.</p>
   </div>
 
-  <div class="sec">
-    <a href="bibliotheque.html" class="btn btn-primary">Voir la méthode en action</a>
+  <div class="sec reveal">
+    <a href="bibliotheque.html" class="btn btn-primary" data-i18n="meth.cta"><span class="fill"></span>Voir la méthode en action</a>
   </div>
 
   <footer class="sitefoot">
-    <span>Strawberry Production</span>
-    <span>VITRINE — base de données d'analyses de marques</span>
+    <span data-i18n="footer.brand">Strawberry Production</span>
+    <span data-i18n="footer.tag">VITRINE — base de données d'analyses de marques</span>
   </footer>
 
 </div>
+
+<script src="script.js"></script>
 </body>
 </html>

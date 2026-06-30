@@ -8,17 +8,24 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div class="grid-backdrop"></div>
 
 <nav class="topnav">
   <div class="topnav-inner">
     <a href="index.html" class="brand-mark">VITRINE<span>.</span></a>
     <div class="nav-links">
-      <a href="index.html">Accueil</a>
-      <a href="bibliotheque.html" class="active">Bibliothèque</a>
-      <a href="methode.html">Méthode</a>
-      <a href="abonnement.html">Abonnement</a>
+      <a href="index.html" data-i18n="nav.home">Accueil</a>
+      <a href="bibliotheque.html" class="active" data-i18n="nav.library">Bibliothèque</a>
+      <a href="methode.html" data-i18n="nav.method">Méthode</a>
+      <a href="abonnement.html" data-i18n="nav.pricing">Abonnement</a>
     </div>
-    <a href="abonnement.html" class="nav-cta">S'abonner</a>
+    <div style="display:flex; align-items:center; gap:14px;">
+      <div class="lang-toggle">
+        <button data-lang="fr">FR</button>
+        <button data-lang="en">EN</button>
+      </div>
+      <a href="abonnement.html" class="nav-cta" data-i18n="nav.cta"><span class="fill"></span>S'abonner</a>
+    </div>
   </div>
 </nav>
 
@@ -26,102 +33,104 @@
 
   <div class="masthead">
     <div class="kicker">
-      <span>Bibliothèque</span>
-      <span>Triable par secteur</span>
+      <span data-i18n="lib.kicker1">Bibliothèque</span>
+      <span data-i18n="lib.kicker2">Triable par secteur</span>
     </div>
-    <h1>Chaque marque<br>déjà décortiquée.</h1>
-    <p class="baseline">L'accumulation des fiches forme une bibliothèque consultable. Plus un abonné rejoint tard, plus elle est dense — c'est le cœur de VITRINE.</p>
+    <h1 data-i18n="lib.h1">Chaque marque<br>déjà décortiquée.</h1>
+    <p class="baseline" data-i18n="lib.baseline">L'accumulation des fiches forme une bibliothèque consultable. Plus un abonné rejoint tard, plus elle est dense — c'est le cœur de VITRINE.</p>
   </div>
 
-  <div class="sec">
-    <div class="sec-head"><span class="sec-num">01</span><span class="sec-title">Fiche complète — exemple</span></div>
-    <div class="fiche">
+  <div class="sec reveal">
+    <div class="sec-head"><span class="sec-num" data-i18n="lib.s1.num">01</span><span class="sec-title" data-i18n="lib.s1.title">Fiche complète — exemple</span></div>
+    <div class="fiche tilt">
       <div class="fiche-head">
         <div>
-          <span class="fiche-tag">Fiche n°014 — publiée cette semaine</span>
-          <div class="fiche-brand">Marque analysée</div>
+          <span class="fiche-tag" data-i18n="lib.fiche.tag">Fiche n°014 — publiée cette semaine</span>
+          <div class="fiche-brand" data-i18n="fiche.brand">Marque analysée</div>
         </div>
-        <span class="fiche-sector">Secteur · DNVB</span>
+        <span class="fiche-sector" data-i18n="fiche.sector">Secteur · DNVB</span>
       </div>
       <div class="fiche-body">
         <div class="fiche-field">
-          <h4>Ce qui marche</h4>
-          <p>Le point de positionnement net, identifié et nommé clairement.</p>
+          <h4 data-i18n="fiche.works">Ce qui marche</h4>
+          <p data-i18n="fiche.works.p">Le point de positionnement net, identifié et nommé clairement.</p>
         </div>
         <div class="fiche-field">
-          <h4>Ce qui est flou</h4>
-          <p>La contradiction ou la zone non résolue du discours de marque.</p>
+          <h4 data-i18n="fiche.blurry">Ce qui est flou</h4>
+          <p data-i18n="fiche.blurry.p">La contradiction ou la zone non résolue du discours de marque.</p>
         </div>
         <div class="fiche-field">
-          <h4>Repositionnement</h4>
-          <p>La direction tranchée que je proposerais à la place.</p>
+          <h4 data-i18n="fiche.reposition">Repositionnement</h4>
+          <p data-i18n="fiche.reposition.p">La direction tranchée que je proposerais à la place.</p>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="sec">
-    <div class="sec-head"><span class="sec-num">02</span><span class="sec-title">Les fiches précédentes</span></div>
-    <p style="margin-bottom:10px;">Réservé aux abonnés. Aperçu de la structure de la bibliothèque, triable par secteur.</p>
+  <div class="sec reveal">
+    <div class="sec-head"><span class="sec-num" data-i18n="lib.s2.num">02</span><span class="sec-title" data-i18n="lib.s2.title">Les fiches précédentes</span></div>
+    <p style="margin-bottom:10px;" data-i18n="lib.s2.p">Réservé aux abonnés. Aperçu de la structure de la bibliothèque, triable par secteur.</p>
 
     <div>
       <div class="fiche-row">
         <span class="fr-num">N°013</span>
         <div>
-          <span class="fr-name">Marque — Mode & accessoires</span>
-          <span class="fr-desc">Un positionnement premium affirmé, contredit par une distribution de masse.</span>
+          <span class="fr-name" data-i18n="lib.row13.name">Marque — Mode & accessoires</span>
+          <span class="fr-desc" data-i18n="lib.row13.desc">Un positionnement premium affirmé, contredit par une distribution de masse.</span>
         </div>
-        <span class="fr-sector">Mode</span>
+        <span class="fr-sector" data-i18n="lib.row13.sector">Mode</span>
       </div>
       <div class="fiche-row">
         <span class="fr-num">N°012</span>
         <div>
-          <span class="fr-name">Marque — SaaS B2B</span>
-          <span class="fr-desc">Une promesse claire en landing page, diluée dès le second niveau de navigation.</span>
+          <span class="fr-name" data-i18n="lib.row12.name">Marque — SaaS B2B</span>
+          <span class="fr-desc" data-i18n="lib.row12.desc">Une promesse claire en landing page, diluée dès le second niveau de navigation.</span>
         </div>
-        <span class="fr-sector">SaaS</span>
+        <span class="fr-sector" data-i18n="lib.row12.sector">SaaS</span>
       </div>
       <div class="fiche-row">
         <span class="fr-num">N°011</span>
         <div>
-          <span class="fr-name">Marque — Food & beverage</span>
-          <span class="fr-desc">Un récit fondateur fort, jamais réinjecté dans le packaging.</span>
+          <span class="fr-name" data-i18n="lib.row11.name">Marque — Food & beverage</span>
+          <span class="fr-desc" data-i18n="lib.row11.desc">Un récit fondateur fort, jamais réinjecté dans le packaging.</span>
         </div>
-        <span class="fr-sector">Food</span>
+        <span class="fr-sector" data-i18n="lib.row11.sector">Food</span>
       </div>
       <div class="fiche-row">
         <span class="fr-num">N°010</span>
         <div>
-          <span class="fr-name">Marque — Luxe / Maison</span>
-          <span class="fr-desc">Une histoire d'artisanat réelle, racontée avec le vocabulaire d'une startup.</span>
+          <span class="fr-name" data-i18n="lib.row10.name">Marque — Luxe / Maison</span>
+          <span class="fr-desc" data-i18n="lib.row10.desc">Une histoire d'artisanat réelle, racontée avec le vocabulaire d'une startup.</span>
         </div>
-        <span class="fr-sector">Luxe</span>
+        <span class="fr-sector" data-i18n="lib.row10.sector">Luxe</span>
       </div>
       <div class="fiche-row">
         <span class="fr-num">N°009</span>
         <div>
-          <span class="fr-name">Marque — Hospitalité</span>
-          <span class="fr-desc">Un service haut de gamme, positionné comme accessible — et qui perd les deux publics.</span>
+          <span class="fr-name" data-i18n="lib.row09.name">Marque — Hospitalité</span>
+          <span class="fr-desc" data-i18n="lib.row09.desc">Un service haut de gamme, positionné comme accessible — et qui perd les deux publics.</span>
         </div>
-        <span class="fr-sector">Hospitalité</span>
+        <span class="fr-sector" data-i18n="lib.row09.sector">Hospitalité</span>
       </div>
     </div>
   </div>
 
-  <div class="sec">
-    <div class="sec-head"><span class="sec-num">03</span><span class="sec-title">Pourquoi la bibliothèque compose</span></div>
-    <p class="wide">Un nouvel abonné en mois 12 paie le même prix qu'un abonné du mois 1 — mais reçoit douze fois plus de valeur accumulée. C'est la seule offre de Strawberry Production qui s'épaissit dans le temps : chaque fiche ajoute de la matière à la précédente, et la rétention monte avec l'âge du produit.</p>
+  <div class="sec reveal">
+    <div class="sec-head"><span class="sec-num" data-i18n="lib.s3.num">03</span><span class="sec-title" data-i18n="lib.s3.title">Pourquoi la bibliothèque compose</span></div>
+    <p class="wide" data-i18n="lib.s3.p">Un nouvel abonné en mois 12 paie le même prix qu'un abonné du mois 1 — mais reçoit douze fois plus de valeur accumulée. C'est la seule offre de Strawberry Production qui s'épaissit dans le temps : chaque fiche ajoute de la matière à la précédente, et la rétention monte avec l'âge du produit.</p>
   </div>
 
-  <div class="sec">
-    <a href="abonnement.html" class="btn btn-primary">Accéder à la bibliothèque complète</a>
+  <div class="sec reveal">
+    <a href="abonnement.html" class="btn btn-primary" data-i18n="lib.cta"><span class="fill"></span>Accéder à la bibliothèque complète</a>
   </div>
 
   <footer class="sitefoot">
-    <span>Strawberry Production</span>
-    <span>VITRINE — base de données d'analyses de marques</span>
+    <span data-i18n="footer.brand">Strawberry Production</span>
+    <span data-i18n="footer.tag">VITRINE — base de données d'analyses de marques</span>
   </footer>
 
 </div>
+
+<script src="script.js"></script>
 </body>
 </html>

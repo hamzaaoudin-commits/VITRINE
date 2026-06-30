@@ -435,7 +435,157 @@ footer.sitefoot{
   gap:10px;
 }
 
+/* ===== LANG TOGGLE ===== */
+.lang-toggle{
+  display:flex;
+  font-family:'JetBrains Mono', monospace;
+  font-size:11.5px;
+  letter-spacing:.04em;
+  border:1px solid var(--ink);
+  overflow:hidden;
+}
+.lang-toggle button{
+  background:none;
+  border:none;
+  cursor:pointer;
+  font-family:inherit;
+  font-size:inherit;
+  letter-spacing:inherit;
+  color:var(--ink-soft);
+  padding:8px 12px;
+  transition:background .15s, color .15s;
+}
+.lang-toggle button.active{
+  background:var(--ink);
+  color:var(--paper);
+}
+.lang-toggle button:not(.active):hover{ color:var(--ink); }
+
+/* ===== SCROLL REVEAL ===== */
+.reveal{
+  opacity:0;
+  transform:translateY(26px);
+  transition:opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1);
+}
+.reveal.in{ opacity:1; transform:translateY(0); }
+
+/* ===== 3D TILT CARDS ===== */
+.tilt{
+  transform-style:preserve-3d;
+  perspective:900px;
+  will-change:transform;
+  transition:transform .12s ease-out, box-shadow .25s ease;
+}
+.tilt:hover{
+  box-shadow:0 22px 38px -18px rgba(28,26,22,.35);
+}
+
+/* ===== 3D HERO STAGE ===== */
+.hero-stage{
+  position:relative;
+  height:280px;
+  margin-top:46px;
+  perspective:1100px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.cube3d{
+  position:relative;
+  width:170px;
+  height:170px;
+  transform-style:preserve-3d;
+  animation:spin3d 16s linear infinite;
+}
+.hero-stage:hover .cube3d{ animation-play-state:paused; }
+.cube3d .face{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:var(--card);
+  border:1.5px solid var(--ink);
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  color:var(--ink-soft);
+  padding:14px;
+}
+.cube3d .face > span{ display:block; }
+.cube3d .face strong{
+  display:block;
+  font-family:'Fraunces', serif;
+  font-style:italic;
+  font-weight:500;
+  font-size:16px;
+  text-transform:none;
+  letter-spacing:0;
+  color:var(--ink);
+  margin-top:4px;
+}
+.cube3d .f-front{ transform:translateZ(85px); }
+.cube3d .f-back{ transform:rotateY(180deg) translateZ(85px); }
+.cube3d .f-right{ transform:rotateY(90deg) translateZ(85px); border-color:var(--red); }
+.cube3d .f-left{ transform:rotateY(-90deg) translateZ(85px); border-color:var(--red); }
+.cube3d .f-top{ transform:rotateX(90deg) translateZ(85px); }
+.cube3d .f-bottom{ transform:rotateX(-90deg) translateZ(85px); }
+
+@keyframes spin3d{
+  from{ transform:rotateX(-18deg) rotateY(0deg); }
+  to{ transform:rotateX(-18deg) rotateY(360deg); }
+}
+
+.hero-stage .orbit-ring{
+  position:absolute;
+  width:240px;
+  height:240px;
+  border:1px dashed var(--rule);
+  border-radius:50%;
+  transform:rotateX(72deg);
+}
+
+/* ===== AMBIENT GRID BACKDROP ===== */
+.grid-backdrop{
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  background-image:
+    linear-gradient(var(--rule) 1px, transparent 1px),
+    linear-gradient(90deg, var(--rule) 1px, transparent 1px);
+  background-size:46px 46px;
+  opacity:.35;
+  mask-image:radial-gradient(circle at 50% 0%, black, transparent 75%);
+}
+
+/* ===== MAGNETIC BUTTON FILL ===== */
+.btn{ position:relative; overflow:hidden; isolation:isolate; }
+.btn span.fill{
+  position:absolute;
+  inset:0;
+  background:var(--red);
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .3s ease;
+  z-index:-1;
+}
+.btn:hover span.fill{ transform:scaleX(1); }
+
+/* ===== STAT HOVER PULSE ===== */
+.stat .num{ transition:transform .2s; display:inline-block; }
+.stat:hover .num{ transform:scale(1.07); color:var(--ink); }
+
 @media (max-width:680px){
+  .hero-stage{ height:220px; }
+  .cube3d{ width:130px; height:130px; }
+  .cube3d .face{ transform:translateZ(65px); }
+  .cube3d .f-back{ transform:rotateY(180deg) translateZ(65px); }
+  .cube3d .f-right{ transform:rotateY(90deg) translateZ(65px); }
+  .cube3d .f-left{ transform:rotateY(-90deg) translateZ(65px); }
+  .cube3d .f-top{ transform:rotateX(90deg) translateZ(65px); }
+  .cube3d .f-bottom{ transform:rotateX(-90deg) translateZ(65px); }
   .duo, .fiche-body, .stats{ grid-template-columns:1fr; }
   .fiche-body{ gap:18px; }
   .stat{ border-right:none; border-bottom:1px solid var(--rule); }

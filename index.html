@@ -8,17 +8,24 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div class="grid-backdrop"></div>
 
 <nav class="topnav">
   <div class="topnav-inner">
     <a href="index.html" class="brand-mark">VITRINE<span>.</span></a>
     <div class="nav-links">
-      <a href="index.html" class="active">Accueil</a>
-      <a href="bibliotheque.html">Bibliothèque</a>
-      <a href="methode.html">Méthode</a>
-      <a href="abonnement.html">Abonnement</a>
+      <a href="index.html" class="active" data-i18n="nav.home">Accueil</a>
+      <a href="bibliotheque.html" data-i18n="nav.library">Bibliothèque</a>
+      <a href="methode.html" data-i18n="nav.method">Méthode</a>
+      <a href="abonnement.html" data-i18n="nav.pricing">Abonnement</a>
     </div>
-    <a href="abonnement.html" class="nav-cta">S'abonner</a>
+    <div style="display:flex; align-items:center; gap:14px;">
+      <div class="lang-toggle">
+        <button data-lang="fr">FR</button>
+        <button data-lang="en">EN</button>
+      </div>
+      <a href="abonnement.html" class="nav-cta" data-i18n="nav.cta"><span class="fill"></span>S'abonner</a>
+    </div>
   </div>
 </nav>
 
@@ -26,89 +33,103 @@
 
   <div class="masthead">
     <div class="kicker">
-      <span>Une publication de Strawberry Production</span>
-      <span>Paris — édition hebdomadaire</span>
+      <span data-i18n="idx.kicker1">Une publication de Strawberry Production</span>
+      <span data-i18n="idx.kicker2">Paris — édition hebdomadaire</span>
     </div>
-    <h1>Ce que je vois<br>quand je regarde<br>une marque.</h1>
-    <p class="baseline">Chaque semaine, une marque réelle, décortiquée publiquement — ce qui marche, ce qui est flou, comment je la repositionnerais. Pas un cours. Une grille de lecture, appliquée en direct, semaine après semaine.</p>
+    <h1 data-i18n="idx.h1">Ce que je vois<br>quand je regarde<br>une marque.</h1>
+    <p class="baseline" data-i18n="idx.baseline">Chaque semaine, une marque réelle, décortiquée publiquement — ce qui marche, ce qui est flou, comment je la repositionnerais. Pas un cours. Une grille de lecture, appliquée en direct, semaine après semaine.</p>
     <div class="cta-row">
-      <a href="abonnement.html" class="btn btn-primary">S'abonner — 15€/mois</a>
-      <a href="bibliotheque.html" class="btn btn-ghost">Voir un exemple de fiche</a>
+      <a href="abonnement.html" class="btn btn-primary" data-i18n="idx.cta1"><span class="fill"></span>S'abonner — 15€/mois</a>
+      <a href="bibliotheque.html" class="btn btn-ghost" data-i18n="idx.cta2"><span class="fill"></span>Voir un exemple de fiche</a>
+    </div>
+
+    <div class="hero-stage">
+      <div class="orbit-ring"></div>
+      <div class="cube3d">
+        <div class="face f-front"><span><span data-i18n="idx.cube.f1.tag">Secteur</span><strong data-i18n="idx.cube.f1">DNVB</strong></span></div>
+        <div class="face f-back"><span><span data-i18n="idx.cube.f2.tag">Secteur</span><strong data-i18n="idx.cube.f2">SaaS B2B</strong></span></div>
+        <div class="face f-right"><span><span data-i18n="idx.cube.f3.tag">Secteur</span><strong data-i18n="idx.cube.f3">Luxe</strong></span></div>
+        <div class="face f-left"><span><span data-i18n="idx.cube.f4.tag">Secteur</span><strong data-i18n="idx.cube.f4">Food</strong></span></div>
+        <div class="face f-top"><span><span data-i18n="idx.cube.f5.tag">Secteur</span><strong data-i18n="idx.cube.f5">Hospitalité</strong></span></div>
+        <div class="face f-bottom"><span><span data-i18n="idx.cube.f6.tag">Fiche</span><strong data-i18n="idx.cube.f6">N°014</strong></span></div>
+      </div>
     </div>
   </div>
 
-  <div class="sec">
-    <div class="sec-head"><span class="sec-num">01</span><span class="sec-title">Le principe</span></div>
+  <div class="sec reveal">
+    <div class="sec-head"><span class="sec-num" data-i18n="idx.s1.num">01</span><span class="sec-title" data-i18n="idx.s1.title">Le principe</span></div>
     <div class="duo">
       <div>
-        <span class="label">Ce n'est pas un blog</span>
-        <p>VITRINE n'enseigne rien frontalement. C'est une écoute du marché en direct : chaque fiche analyse une marque publique, pas un client, avec la même grille que celle utilisée pour les case studies Strawberry.</p>
+        <span class="label" data-i18n="idx.s1.l1">Ce n'est pas un blog</span>
+        <p data-i18n="idx.s1.p1">VITRINE n'enseigne rien frontalement. C'est une écoute du marché en direct : chaque fiche analyse une marque publique, pas un client, avec la même grille que celle utilisée pour les case studies Strawberry.</p>
       </div>
       <div>
-        <span class="label">Ce que ça construit</span>
-        <p class="pull">Une bibliothèque qui s'épaissit chaque semaine — et qui apprend, sans jamais l'expliquer, à voir une marque comme je la vois.</p>
+        <span class="label" data-i18n="idx.s1.l2">Ce que ça construit</span>
+        <p class="pull" data-i18n="idx.s1.p2">Une bibliothèque qui s'épaissit chaque semaine — et qui apprend, sans jamais l'expliquer, à voir une marque comme je la vois.</p>
       </div>
     </div>
   </div>
 
-  <div class="sec">
-    <div class="sec-head"><span class="sec-num">02</span><span class="sec-title">Une fiche, en exemple</span></div>
-    <p style="margin-bottom:26px;">Format fixe, lecture courte. La structure ne change jamais — seule la marque change.</p>
+  <div class="sec reveal">
+    <div class="sec-head"><span class="sec-num" data-i18n="idx.s2.num">02</span><span class="sec-title" data-i18n="idx.s2.title">Une fiche, en exemple</span></div>
+    <p style="margin-bottom:26px;" data-i18n="idx.s2.p">Format fixe, lecture courte. La structure ne change jamais — seule la marque change.</p>
 
-    <div class="fiche">
+    <div class="fiche tilt">
       <div class="fiche-head">
         <div>
-          <span class="fiche-tag">Fiche n°014 — 12 min de lecture</span>
-          <div class="fiche-brand">Marque analysée</div>
+          <span class="fiche-tag" data-i18n="fiche.tag">Fiche n°014 — 12 min de lecture</span>
+          <div class="fiche-brand" data-i18n="fiche.brand">Marque analysée</div>
         </div>
-        <span class="fiche-sector">Secteur · DNVB</span>
+        <span class="fiche-sector" data-i18n="fiche.sector">Secteur · DNVB</span>
       </div>
       <div class="fiche-body">
         <div class="fiche-field">
-          <h4>Ce qui marche</h4>
-          <p>Le point de positionnement net, identifié et nommé.</p>
+          <h4 data-i18n="fiche.works">Ce qui marche</h4>
+          <p data-i18n="fiche.works.p">Le point de positionnement net, identifié et nommé.</p>
         </div>
         <div class="fiche-field">
-          <h4>Ce qui est flou</h4>
-          <p>La contradiction ou la zone non résolue du discours de marque.</p>
+          <h4 data-i18n="fiche.blurry">Ce qui est flou</h4>
+          <p data-i18n="fiche.blurry.p">La contradiction ou la zone non résolue du discours de marque.</p>
         </div>
         <div class="fiche-field">
-          <h4>Repositionnement</h4>
-          <p>Comment je trancherais, en une direction nette.</p>
+          <h4 data-i18n="fiche.reposition">Repositionnement</h4>
+          <p data-i18n="fiche.reposition.p">Comment je trancherais, en une direction nette.</p>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="sec">
-    <div class="sec-head"><span class="sec-num">03</span><span class="sec-title">Pour qui</span></div>
+  <div class="sec reveal">
+    <div class="sec-head"><span class="sec-num" data-i18n="idx.s3.num">03</span><span class="sec-title" data-i18n="idx.s3.title">Pour qui</span></div>
     <ul class="checks">
-      <li><span class="mk">→</span><p>Fondateurs et marketeurs qui veulent affiner leur œil sur le positionnement, fiche après fiche.</p></li>
-      <li><span class="mk">→</span><p>Consultants et freelances en branding qui veulent une référence externe pour calibrer leurs propres analyses.</p></li>
-      <li><span class="mk">→</span><p>Quiconque veut comprendre comment une marque se construit — ou se trahit — sans suivre une formation.</p></li>
+      <li><span class="mk">→</span><p data-i18n="idx.s3.l1">Fondateurs et marketeurs qui veulent affiner leur œil sur le positionnement, fiche après fiche.</p></li>
+      <li><span class="mk">→</span><p data-i18n="idx.s3.l2">Consultants et freelances en branding qui veulent une référence externe pour calibrer leurs propres analyses.</p></li>
+      <li><span class="mk">→</span><p data-i18n="idx.s3.l3">Quiconque veut comprendre comment une marque se construit — ou se trahit — sans suivre une formation.</p></li>
     </ul>
   </div>
 
-  <div class="stats">
+  <div class="stats reveal">
     <div class="stat">
       <div class="num">15–25€</div>
-      <div class="lbl">par mois</div>
+      <div class="lbl" data-i18n="idx.stat1">par mois</div>
     </div>
     <div class="stat">
       <div class="num">1/sem</div>
-      <div class="lbl">nouvelle fiche</div>
+      <div class="lbl" data-i18n="idx.stat2">nouvelle fiche</div>
     </div>
     <div class="stat">
       <div class="num">∞</div>
-      <div class="lbl">bibliothèque cumulée</div>
+      <div class="lbl" data-i18n="idx.stat3">bibliothèque cumulée</div>
     </div>
   </div>
 
   <footer class="sitefoot">
-    <span>Strawberry Production</span>
-    <span>VITRINE — base de données d'analyses de marques</span>
+    <span data-i18n="footer.brand">Strawberry Production</span>
+    <span data-i18n="footer.tag">VITRINE — base de données d'analyses de marques</span>
   </footer>
 
 </div>
+
+<script src="script.js"></script>
 </body>
 </html>
