@@ -1,6 +1,6 @@
 /* =========================================================
    VITRINE — script.js
-   i18n (FR/EN) + interactions 3D / scroll reveal
+   i18n (FR/EN) + nav mobile + a11y + interactions
    ========================================================= */
 
 (function () {
@@ -9,19 +9,30 @@
   const I18N = {
 
     // NAV
-    "nav.home":        { fr: "Accueil",        en: "Home" },
+    "nav.home":         { fr: "Accueil",        en: "Home" },
     "nav.library":      { fr: "Bibliothèque",   en: "Library" },
     "nav.method":       { fr: "Méthode",        en: "Method" },
     "nav.pricing":      { fr: "Abonnement",     en: "Pricing" },
     "nav.cta":          { fr: "S'abonner",      en: "Subscribe" },
 
+    // TITLES + META DESCRIPTIONS (per page)
+    "title.index":      { fr: "VITRINE — La lecture du marché, chaque semaine", en: "VITRINE — The read on the market, every week" },
+    "meta.index":       { fr: "Un abonnement où chaque semaine une marque réelle est disséquée : ce qui marche, ce qui est flou, comment la repositionner. Un radar de positionnement, pas un cours.", en: "A subscription where every week a real brand is dissected: what works, what's blurry, how to reposition it. Positioning radar, not a course." },
+    "title.library":    { fr: "Bibliothèque — VITRINE", en: "Library — VITRINE" },
+    "meta.library":     { fr: "La bibliothèque cumulée des fiches VITRINE, marques réelles décortiquées, triable par secteur.", en: "The cumulative library of VITRINE sheets, real brands taken apart, sortable by sector." },
+    "title.method":     { fr: "Méthode — VITRINE", en: "Method — VITRINE" },
+    "meta.method":      { fr: "La grille de lecture utilisée dans chaque fiche VITRINE, déroulée sur des cas réels.", en: "The reading grid used in every VITRINE sheet, worked through on real cases." },
+    "title.pricing":    { fr: "Abonnement — VITRINE", en: "Pricing — VITRINE" },
+    "meta.pricing":     { fr: "S'abonner à VITRINE : une fiche d'analyse de marque par semaine, 15 à 25€ par mois. Sans engagement.", en: "Subscribe to VITRINE: one brand-analysis sheet per week, €15 to €25 a month. No commitment." },
+    "title.404":        { fr: "Page introuvable — VITRINE", en: "Page not found — VITRINE" },
+
     // INDEX
     "idx.kicker1":      { fr: "Une publication de Strawberry Production", en: "A Strawberry Production publication" },
     "idx.kicker2":      { fr: "Paris — édition hebdomadaire", en: "Paris — weekly edition" },
     "idx.h1":           { fr: "Ce que je vois<br>quand je regarde<br>une marque.", en: "What I see<br>when I look at<br>a brand." },
-    "idx.baseline":     { fr: "Chaque semaine, une marque réelle, décortiquée publiquement — ce qui marche, ce qui est flou, comment je la repositionnerais. Pas un cours. Une grille de lecture, appliquée en direct, semaine après semaine.", en: "Every week, a real brand, taken apart in public — what works, what's blurry, how I'd reposition it. Not a course. A reading grid, applied live, week after week." },
+    "idx.baseline":     { fr: "Chaque semaine, une marque réelle disséquée en public — ce qui marche, ce qui est flou, comment je la repositionnerais. Ce n'est pas un cours : c'est un radar. La lecture du marché que tes concurrents n'ont pas, semaine après semaine.", en: "Every week, a real brand dissected in public — what works, what's blurry, how I'd reposition it. This isn't a course: it's radar. The read on the market your competitors don't have, week after week." },
     "idx.cta1":         { fr: "S'abonner — 15€/mois", en: "Subscribe — €15/mo" },
-    "idx.cta2":         { fr: "Voir un exemple de fiche", en: "See a sample sheet" },
+    "idx.cta2":         { fr: "Voir la fiche de la semaine", en: "See this week's sheet" },
 
     "idx.cube.f1.tag":  { fr: "Secteur", en: "Sector" },
     "idx.cube.f1":      { fr: "DNVB", en: "DNVB" },
@@ -40,33 +51,42 @@
     "idx.s1.title":     { fr: "Le principe", en: "The principle" },
     "idx.s1.l1":        { fr: "Ce n'est pas un blog", en: "This isn't a blog" },
     "idx.s1.p1":        { fr: "VITRINE n'enseigne rien frontalement. C'est une écoute du marché en direct : chaque fiche analyse une marque publique, pas un client, avec la même grille que celle utilisée pour les case studies Strawberry.", en: "VITRINE doesn't teach anything head-on. It's a live read of the market: each sheet analyzes a public brand, never a client, using the same grid as Strawberry's case studies." },
-    "idx.s1.l2":        { fr: "Ce que ça construit", en: "What it builds" },
-    "idx.s1.p2":        { fr: "Une bibliothèque qui s'épaissit chaque semaine — et qui apprend, sans jamais l'expliquer, à voir une marque comme je la vois.", en: "A library that thickens every week — teaching you, without ever spelling it out, to see a brand the way I see it." },
+    "idx.s1.l2":        { fr: "Ce que ça installe", en: "What it installs" },
+    "idx.s1.p2":        { fr: "Un radar qui ne s'éteint plus. À mesure que la bibliothèque s'épaissit, tu lis le positionnement d'une marque en quelques secondes — là où le marché met des mois. Ce n'est pas un savoir qu'on termine ; c'est un angle mort en moins, à vie.", en: "A radar that never switches off. As the library thickens, you read a brand's positioning in seconds — where the market takes months. It's not knowledge you finish; it's one blind spot fewer, for good." },
 
     "idx.s2.num":       { fr: "02", en: "02" },
-    "idx.s2.title":     { fr: "Une fiche, en exemple", en: "A sample sheet" },
-    "idx.s2.p":         { fr: "Format fixe, lecture courte. La structure ne change jamais — seule la marque change.", en: "Fixed format, short read. The structure never changes — only the brand does." },
+    "idx.s2.title":     { fr: "La fiche de la semaine", en: "This week's sheet" },
+    "idx.s2.p":         { fr: "Format fixe, lecture courte. La structure ne change jamais — seule la marque change. Celle-ci est en accès libre.", en: "Fixed format, short read. The structure never changes — only the brand does. This one is free to read." },
 
     "idx.s3.num":       { fr: "03", en: "03" },
     "idx.s3.title":     { fr: "Pour qui", en: "Who it's for" },
-    "idx.s3.l1":        { fr: "Fondateurs et marketeurs qui veulent affiner leur œil sur le positionnement, fiche après fiche.", en: "Founders and marketers who want to sharpen their eye for positioning, one sheet at a time." },
-    "idx.s3.l2":        { fr: "Consultants et freelances en branding qui veulent une référence externe pour calibrer leurs propres analyses.", en: "Branding consultants and freelancers who want an outside reference to calibrate their own analyses." },
-    "idx.s3.l3":        { fr: "Quiconque veut comprendre comment une marque se construit — ou se trahit — sans suivre une formation.", en: "Anyone who wants to understand how a brand is built — or betrays itself — without taking a course." },
+    "idx.s3.l1":        { fr: "Fondateurs et marketeurs qui veulent lire le positionnement d'un concurrent avant lui — et arbitrer plus vite.", en: "Founders and marketers who want to read a competitor's positioning before they do — and decide faster." },
+    "idx.s3.l2":        { fr: "Consultants et freelances en branding qui veulent une référence externe pour calibrer leur propre regard sur chaque dossier.", en: "Branding consultants and freelancers who want an outside reference to calibrate their own read on every case." },
+    "idx.s3.l3":        { fr: "Quiconque construit une marque et refuse d'avoir un temps de retard sur ce qui se joue vraiment dans son marché.", en: "Anyone building a brand who refuses to be a step behind what's actually happening in their market." },
 
     "idx.stat1":        { fr: "par mois", en: "per month" },
     "idx.stat2":        { fr: "nouvelle fiche", en: "new sheet" },
     "idx.stat3":        { fr: "bibliothèque cumulée", en: "cumulative library" },
 
-    // FICHE COMMON
-    "fiche.tag":        { fr: "Fiche n°014 — 12 min de lecture", en: "Sheet No.014 — 12 min read" },
-    "fiche.brand":      { fr: "Marque analysée", en: "Brand analyzed" },
-    "fiche.sector":     { fr: "Secteur · DNVB", en: "Sector · DNVB" },
+    // FICHE COMMON (real, named — Sézane)
+    "fiche.tag":        { fr: "Fiche n°014 — 11 min de lecture", en: "Sheet No.014 — 11 min read" },
+    "fiche.brand":      { fr: "Sézane", en: "Sézane" },
+    "fiche.sector":     { fr: "Secteur · Mode / DNVB", en: "Sector · Fashion / DNVB" },
     "fiche.works":      { fr: "Ce qui marche", en: "What works" },
-    "fiche.works.p":    { fr: "Le point de positionnement net, identifié et nommé.", en: "The one clear positioning point, identified and named." },
+    "fiche.works.p":    { fr: "Un « premium accessible » made-in-France tenu sans dévier : récit d'atelier, rareté orchestrée, retail expérientiel (l'Appartement) et mission (la fondation DEMAIN) cousus dans la marque, pas collés dessus.", en: "An 'accessible premium', made in France, held without wavering: workshop narrative, orchestrated scarcity, experiential retail (l'Appartement) and mission (the DEMAIN foundation) sewn into the brand, not glued on." },
     "fiche.blurry":     { fr: "Ce qui est flou", en: "What's blurry" },
-    "fiche.blurry.p":   { fr: "La contradiction ou la zone non résolue du discours de marque.", en: "The contradiction or unresolved zone in the brand's discourse." },
+    "fiche.blurry.p":   { fr: "La promesse de rareté et de pièce « qui dure » cohabite mal avec une cadence de sorties très soutenue. Plus les drops s'enchaînent, plus « spécial » glisse vers « disponible ».", en: "The promise of scarcity and a piece 'that lasts' sits awkwardly with a very high release cadence. The more the drops stack up, the more 'special' slides toward 'available'." },
     "fiche.reposition": { fr: "Repositionnement", en: "Repositioning" },
-    "fiche.reposition.p": { fr: "Comment je trancherais, en une direction nette.", en: "How I'd settle it, in one clear direction." },
+    "fiche.reposition.p": { fr: "Trancher : soit ralentir et éditorialiser la cadence pour honorer la rareté, soit l'assumer et déplacer la promesse de « rareté » vers « constance de style ». L'entre-deux use la valeur perçue.", en: "Settle it: either slow down and editorialize the cadence to honor scarcity, or own it and shift the promise from 'scarcity' to 'consistency of style'. The in-between erodes perceived value." },
+
+    // STRAWBERRY BRIDGE (shared)
+    "bridge.kicker":    { fr: "En privé", en: "In private" },
+    "bridge.title":     { fr: "Cette lecture, sur ta marque.", en: "This read, on your brand." },
+    "bridge.p":         { fr: "VITRINE dissèque des marques publiques. Quand c'est la tienne, ça se passe en commission privée : Strawberry Production applique la même méthode S.T.R.A.W. en profondeur — audit, repositionnement, direction de marque.", en: "VITRINE dissects public brands. When it's yours, it happens under private commission: Strawberry Production applies the same S.T.R.A.W. method in depth — audit, repositioning, brand direction." },
+    "bridge.cta":       { fr: "Travailler avec Strawberry →", en: "Work with Strawberry →" },
+
+    // DISCLAIMER
+    "disclaimer":       { fr: "Analyses indépendantes. VITRINE n'est lié à aucune des marques citées, qui n'ont pas commandé ces lectures.", en: "Independent analyses. VITRINE is not affiliated with any brand mentioned; none commissioned these reads." },
 
     // FOOTER
     "footer.brand":     { fr: "Strawberry Production", en: "Strawberry Production" },
@@ -79,32 +99,42 @@
     "lib.baseline":     { fr: "L'accumulation des fiches forme une bibliothèque consultable. Plus un abonné rejoint tard, plus elle est dense — c'est le cœur de VITRINE.", en: "The accumulation of sheets forms a browsable library. The later a subscriber joins, the denser it is — that's the heart of VITRINE." },
 
     "lib.s1.num":       { fr: "01", en: "01" },
-    "lib.s1.title":     { fr: "Fiche complète — exemple", en: "Full sheet — example" },
+    "lib.s1.title":     { fr: "Fiche complète — en accès libre", en: "Full sheet — free to read" },
     "lib.fiche.tag":    { fr: "Fiche n°014 — publiée cette semaine", en: "Sheet No.014 — published this week" },
+    "libf.verdict.l":   { fr: "Le verdict", en: "The verdict" },
+    "libf.verdict.p":   { fr: "Une des marques françaises les mieux tenues de sa génération — à un cheveu de diluer ce qui la rend désirable. Le risque n'est pas la qualité, c'est le rythme.", en: "One of the best-held French brands of its generation — a hair away from diluting what makes it desirable. The risk isn't quality, it's pace." },
 
     "lib.s2.num":       { fr: "02", en: "02" },
     "lib.s2.title":     { fr: "Les fiches précédentes", en: "Previous sheets" },
-    "lib.s2.p":         { fr: "Réservé aux abonnés. Aperçu de la structure de la bibliothèque, triable par secteur.", en: "Subscribers only. A preview of the library's structure, sortable by sector." },
+    "lib.s2.p":         { fr: "Aperçu des fiches déjà publiées. Le corps complet de chacune est réservé aux abonnés ; la bibliothèque est triable par secteur.", en: "A preview of sheets already published. The full body of each is subscribers-only; the library is sortable by sector." },
 
-    "lib.row13.name":   { fr: "Marque — Mode & accessoires", en: "Brand — Fashion & accessories" },
-    "lib.row13.desc":   { fr: "Un positionnement premium affirmé, contredit par une distribution de masse.", en: "A confidently premium positioning, undercut by mass-market distribution." },
+    "lib.row13.name":   { fr: "Asphalte — Mode homme / DNVB", en: "Asphalte — Menswear / DNVB" },
+    "lib.row13.desc":   { fr: "La pré-commande érigée en manifeste anti-gaspillage — limpide. Mais le récit produit s'éparpille à mesure que le catalogue s'élargit.", en: "Pre-order raised into an anti-waste manifesto — crystal clear. But the product story scatters as the catalog widens." },
     "lib.row13.sector": { fr: "Mode", en: "Fashion" },
 
-    "lib.row12.name":   { fr: "Marque — SaaS B2B", en: "Brand — B2B SaaS" },
-    "lib.row12.desc":   { fr: "Une promesse claire en landing page, diluée dès le second niveau de navigation.", en: "A clear promise on the landing page, diluted by the second level of navigation." },
+    "lib.row12.name":   { fr: "Qonto — Fintech / SaaS B2B", en: "Qonto — Fintech / B2B SaaS" },
+    "lib.row12.desc":   { fr: "« La banque pro qui fait gagner du temps » : nette en landing, diluée dès que l'empilement de features prend le dessus sur la promesse.", en: "'The business account that saves you time': sharp on the landing page, diluted the moment feature-stacking overtakes the promise." },
     "lib.row12.sector": { fr: "SaaS", en: "SaaS" },
 
-    "lib.row11.name":   { fr: "Marque — Food & beverage", en: "Brand — Food & beverage" },
-    "lib.row11.desc":   { fr: "Un récit fondateur fort, jamais réinjecté dans le packaging.", en: "A strong founding story, never carried through to the packaging." },
-    "lib.row11.sector": { fr: "Food", en: "Food" },
+    "lib.row11.name":   { fr: "Typology — Beauté / DNVB", en: "Typology — Beauty / DNVB" },
+    "lib.row11.desc":   { fr: "Transparence radicale et minimalisme design, très forts. La tension jamais tranchée : laboratoire clinique ou marque lifestyle ?", en: "Radical transparency and minimal design, very strong. The tension never settled: clinical lab or lifestyle brand?" },
+    "lib.row11.sector": { fr: "Beauté", en: "Beauty" },
 
-    "lib.row10.name":   { fr: "Marque — Luxe / Maison", en: "Brand — Luxury / Home" },
-    "lib.row10.desc":   { fr: "Une histoire d'artisanat réelle, racontée avec le vocabulaire d'une startup.", en: "A genuine craftsmanship story, told in the vocabulary of a startup." },
+    "lib.row10.name":   { fr: "Diptyque — Luxe / Maison", en: "Diptyque — Luxury / Home" },
+    "lib.row10.desc":   { fr: "Un récit de maison parisienne rare et cohérent — parfois raconté, en digital, avec un vocabulaire trop startup pour son rang.", en: "A rare, coherent Parisian maison narrative — sometimes told, on digital, in vocabulary too startup for its standing." },
     "lib.row10.sector": { fr: "Luxe", en: "Luxury" },
 
-    "lib.row09.name":   { fr: "Marque — Hospitalité", en: "Brand — Hospitality" },
-    "lib.row09.desc":   { fr: "Un service haut de gamme, positionné comme accessible — et qui perd les deux publics.", en: "A high-end service positioned as accessible — losing both audiences." },
+    "lib.row09.name":   { fr: "Big Mamma — Hospitalité", en: "Big Mamma — Hospitality" },
+    "lib.row09.desc":   { fr: "Énergie trattoria festive et accessible, magistralement mise en scène — avec un ticket réel qui crée un écart d'attente à l'addition.", en: "Festive, accessible trattoria energy, masterfully staged — with a real check that creates an expectation gap at the bill." },
     "lib.row09.sector": { fr: "Hospitalité", en: "Hospitality" },
+
+    "lib.row08.name":   { fr: "La Vie — Food / Plant-based", en: "La Vie — Food / Plant-based" },
+    "lib.row08.desc":   { fr: "Une mission claire (bien-être animal + goût) et un design superbe — au point, parfois, de passer devant la preuve produit.", en: "A clear mission (animal welfare + taste) and superb design — sometimes to the point of stepping in front of the product proof." },
+    "lib.row08.sector": { fr: "Food", en: "Food" },
+
+    "lib.row07.name":   { fr: "Le Slip Français — Mode / DNVB", en: "Le Slip Français — Fashion / DNVB" },
+    "lib.row07.desc":   { fr: "Le made-in-France en étendard, porté par un humour de marque redoutable — qui a parfois éclipsé la montée en gamme réelle.", en: "Made-in-France as a banner, carried by formidable brand humor — which has at times eclipsed the real move upmarket." },
+    "lib.row07.sector": { fr: "Mode", en: "Fashion" },
 
     "lib.s3.num":       { fr: "03", en: "03" },
     "lib.s3.title":     { fr: "Pourquoi la bibliothèque compose", en: "Why the library compounds" },
@@ -116,7 +146,7 @@
     "meth.kicker1":     { fr: "Méthode", en: "Method" },
     "meth.kicker2":     { fr: "La grille de lecture", en: "The reading grid" },
     "meth.h1":          { fr: "La même grille,<br>appliquée chaque<br>semaine.", en: "The same grid,<br>applied every<br>week." },
-    "meth.baseline":    { fr: "VITRINE n'enseigne rien frontalement. La méthode se transmet par répétition : la même structure, appliquée à des marques différentes, semaine après semaine.", en: "VITRINE doesn't teach anything head-on. The method spreads through repetition: the same structure, applied to different brands, week after week." },
+    "meth.baseline":    { fr: "VITRINE n'enseigne rien frontalement. La grille s'installe par répétition : la même structure, sur des marques différentes, semaine après semaine — jusqu'à ce que tu ne puisses plus regarder une marque sans elle.", en: "VITRINE doesn't teach anything head-on. The grid installs itself through repetition: the same structure, on different brands, week after week — until you can't look at a brand without it." },
 
     "meth.s1.num":      { fr: "01", en: "01" },
     "meth.s1.title":    { fr: "Trois questions, toujours les mêmes", en: "Three questions, always the same" },
@@ -132,13 +162,36 @@
     "meth.l1":          { fr: "Pas un audit complet", en: "Not a full audit" },
     "meth.p1":          { fr: "Une fiche VITRINE n'a pas l'exhaustivité d'un audit de marque payant. Elle prend dix minutes à lire et laisse une impression nette — c'est la clarté du regard qui compte, pas la couverture du sujet.", en: "A VITRINE sheet doesn't have the exhaustiveness of a paid brand audit. It takes ten minutes to read and leaves a clear impression — clarity of perspective matters more than coverage." },
     "meth.l2":          { fr: "Pas un cours", en: "Not a course" },
-    "meth.p2":          { fr: "Aucune fiche n'explique la méthode en théorie. Elle l'applique, point. C'est en la voyant tourner sur des dizaines de cas que la grille de lecture s'installe chez le lecteur.", en: "No sheet explains the method in theory. It just applies it. Seeing it run on dozens of cases is what installs the reading grid in the reader." },
+    "meth.p2":          { fr: "Aucune fiche n'explique la méthode en théorie — et c'est voulu. Un cours se termine ; VITRINE, non. Tu ne « finis » pas la grille : tu la gardes allumée. C'est ce qui la rend indélogeable une fois installée.", en: "No sheet explains the method in theory — by design. A course ends; VITRINE doesn't. You don't 'finish' the grid: you keep it running. That's what makes it impossible to unlearn once it's in." },
 
     "meth.s3.num":      { fr: "03", en: "03" },
     "meth.s3.title":    { fr: "D'où vient cette grille", en: "Where this grid comes from" },
     "meth.s3.p":        { fr: "C'est la même méthodologie que celle utilisée dans les missions Strawberry Production — la méthode S.T.R.A.W., appliquée habituellement à des marques clientes en commission privée. VITRINE l'applique en public, à des marques que vous connaissez déjà, sans qu'aucune d'elles n'ait commandé l'analyse.", en: "It's the same methodology used in Strawberry Production engagements — the S.T.R.A.W. method, normally applied to client brands under private commission. VITRINE applies it in public, to brands you already know, none of which commissioned the analysis." },
 
-    "meth.cta":         { fr: "Voir la méthode en action", en: "See the method in action" },
+    // METHOD — CASE STUDIES (section 04)
+    "meth.s4.num":      { fr: "04", en: "04" },
+    "meth.s4.title":    { fr: "Deux cas, déroulés en entier", en: "Two cases, worked in full" },
+    "meth.s4.p":        { fr: "Pas des extraits. La grille appliquée jusqu'à la décision.", en: "Not excerpts. The grid applied all the way to the decision." },
+
+    "cs.a.brand":       { fr: "Typology", en: "Typology" },
+    "cs.a.sector":      { fr: "Beauté / DNVB", en: "Beauty / DNVB" },
+    "cs.a.works.p":     { fr: "La transparence est le produit autant que la crème : formules courtes, INCI assumés, sourcing nommé, design blanc de laboratoire. Peu de marques beauté tiennent une promesse de clarté aussi loin dans le détail.", en: "Transparency is the product as much as the cream: short formulas, INCI owned, sourcing named, lab-white design. Few beauty brands hold a clarity promise this far into the detail." },
+    "cs.a.blurry.p":    { fr: "Le corps de marque hésite entre deux mondes. Le ton laboratoire promet la preuve et l'efficacité ; l'esthétique et le rythme de lancement promettent le lifestyle et la nouveauté. Les deux publics ne veulent pas la même chose — l'un veut des résultats mesurés, l'autre veut désirer.", en: "The brand body hesitates between two worlds. The lab tone promises proof and efficacy; the aesthetic and launch rhythm promise lifestyle and novelty. The two audiences don't want the same thing — one wants measured results, the other wants to desire." },
+    "cs.a.reposition.p": { fr: "Choisir la preuve. Faire de l'efficacité démontrée le centre de gravité — tests, avant/après sobres, mécanisme d'action expliqué — et laisser l'esthétique servir cette promesse au lieu de la concurrencer. La clarté est déjà l'ADN ; il suffit de la pousser du flacon jusqu'au résultat.", en: "Choose proof. Make demonstrated efficacy the center of gravity — tests, sober before/after, mechanism explained — and let the aesthetic serve that promise instead of competing with it. Clarity is already the DNA; just push it from the bottle through to the result." },
+    "cs.a.verdict":     { fr: "Verdict — une marque de clarté qui n'a pas encore tranché ce qu'elle veut prouver.", en: "Verdict — a brand of clarity that hasn't yet settled what it wants to prove." },
+
+    "cs.b.brand":       { fr: "Qonto", en: "Qonto" },
+    "cs.b.sector":      { fr: "Fintech / SaaS B2B", en: "Fintech / B2B SaaS" },
+    "cs.b.works.p":     { fr: "La promesse d'origine est imbattable de netteté : la gestion bancaire des pros, sans la banque. Rapidité, interface, support — un « gain de temps » que la cible ressent dès la première minute d'onboarding.", en: "The original promise is unbeatably sharp: business banking, without the bank. Speed, interface, support — a 'time saved' the target feels within the first minute of onboarding." },
+    "cs.b.blurry.p":    { fr: "En grandissant, le discours s'alourdit. Comptes, cartes, compta, facturation, financement : chaque brique est légitime, mais empilées sur la même page elles noient la promesse simple sous une liste de fonctionnalités. Le prospect ne sait plus quel problème unique la marque résout.", en: "As it grows, the messaging thickens. Accounts, cards, accounting, invoicing, financing: each block is legitimate, but stacked on the same page they drown the simple promise under a feature list. The prospect no longer knows which single problem the brand solves." },
+    "cs.b.reposition.p": { fr: "Réancrer sur le temps, pas sur les fonctions. Garder « le temps rendu au dirigeant » comme colonne vertébrale, et présenter chaque feature comme une heure regagnée, pas comme une case cochée. La largeur de l'offre devient une preuve de la promesse au lieu de la diluer.", en: "Re-anchor on time, not on features. Keep 'time given back to the founder' as the spine, and present each feature as an hour reclaimed, not a box ticked. The breadth of the offer becomes proof of the promise instead of diluting it." },
+    "cs.b.verdict":     { fr: "Verdict — une promesse limpide, menacée par son propre succès fonctionnel.", en: "Verdict — a crystal-clear promise, threatened by its own functional success." },
+
+    "cs.works":         { fr: "Ce qui marche", en: "What works" },
+    "cs.blurry":        { fr: "Ce qui est flou", en: "What's blurry" },
+    "cs.reposition":    { fr: "Repositionnement", en: "Repositioning" },
+
+    "meth.cta":         { fr: "Voir la bibliothèque", en: "See the library" },
 
     // PRICING PAGE
     "pr.kicker1":       { fr: "Abonnement", en: "Subscription" },
@@ -158,13 +211,13 @@
     "pr.f4":            { fr: "Sans engagement, résiliable à tout moment", en: "No commitment, cancel anytime" },
     "pr.subscribe":     { fr: "S'abonner maintenant", en: "Subscribe now" },
 
-    "pr.s2.num":        { fr: "02", en: "02" },
+    "pr.s2.num":        { fr: "04", en: "04" },
     "pr.s2.title":      { fr: "Ce que vous recevez", en: "What you get" },
     "pr.r1":            { fr: "Une nouvelle fiche chaque semaine, livrée par email et disponible dans la bibliothèque en ligne.", en: "A new sheet every week, delivered by email and available in the online library." },
     "pr.r2":            { fr: "L'accès rétroactif à toutes les fiches déjà publiées, dès le premier jour d'abonnement.", en: "Retroactive access to every sheet already published, from day one of your subscription." },
     "pr.r3":            { fr: "Une bibliothèque triable par secteur, qui s'épaissit chaque semaine sans surcoût.", en: "A library sortable by sector, thickening every week at no extra cost." },
 
-    "pr.s3.num":        { fr: "03", en: "03" },
+    "pr.s3.num":        { fr: "05", en: "05" },
     "pr.s3.title":      { fr: "Questions fréquentes", en: "Frequently asked questions" },
     "pr.q1":            { fr: "Les marques analysées sont-elles mes clients ?", en: "Are the brands analyzed my clients?" },
     "pr.a1":            { fr: "Non. VITRINE analyse exclusivement des marques publiques, jamais des clients de Strawberry Production. C'est une écoute du marché, pas un audit commandé.", en: "No. VITRINE only analyzes public brands, never Strawberry Production clients. It's a read on the market, not a commissioned audit." },
@@ -173,27 +226,139 @@
     "pr.q3":            { fr: "Que se passe-t-il si je résilie ?", en: "What happens if I cancel?" },
     "pr.a3":            { fr: "Vous perdez l'accès à la bibliothèque à la fin de la période déjà payée. Le prix fondateur n'est pas garanti en cas de réabonnement ultérieur.", en: "You lose access to the library at the end of the period already paid for. The founder price isn't guaranteed if you resubscribe later." },
     "pr.q4":            { fr: "Le rythme est-il vraiment hebdomadaire ?", en: "Is the pace really weekly?" },
-    "pr.a4":            { fr: "L'objectif est une fiche par semaine, avec une tolérance annoncée à l'avance en cas de cadence ajustée à deux semaines.", en: "The goal is one sheet per week, with advance notice if the pace ever shifts to every two weeks." }
+    "pr.a4":            { fr: "L'objectif est une fiche par semaine, avec une tolérance annoncée à l'avance en cas de cadence ajustée à deux semaines.", en: "The goal is one sheet per week, with advance notice if the pace ever shifts to every two weeks." },
+
+    // 404
+    "nf.kicker1":       { fr: "Erreur 404", en: "Error 404" },
+    "nf.kicker2":       { fr: "Page introuvable", en: "Page not found" },
+    "nf.h1":            { fr: "Cette fiche<br>n'existe pas.", en: "This sheet<br>doesn't exist." },
+    "nf.p":             { fr: "La page que vous cherchez a été déplacée, ou n'a jamais été publiée. La bibliothèque, elle, est toujours là.", en: "The page you're looking for has moved, or was never published. The library, though, is still here." },
+    "nf.cta1":          { fr: "Retour à l'accueil", en: "Back to home" },
+    "nf.cta2":          { fr: "Voir la bibliothèque", en: "See the library" },
+
+    // ===== L'ARSENAL (toolkit intégré à l'offre VITRINE) =====
+    "nav.arsenal":      { fr: "L'Arsenal", en: "The Arsenal" },
+    "ars.brand":        { fr: "L'Arsenal", en: "The Arsenal" },
+
+    // INDEX — l'offre en trois temps
+    "idx.s4.num":       { fr: "04", en: "04" },
+    "idx.s4.title":     { fr: "L'offre, en trois temps", en: "The offer, in three moves" },
+    "idx.s4.p":         { fr: "Un même regard, trois manières d'y entrer — du plus léger au plus engageant. Rien de dilué : une seule méthode, S.T.R.A.W., déclinée selon ce dont tu as besoin.", en: "One eye, three ways in — from the lightest to the most committed. Nothing diluted: a single method, S.T.R.A.W., in the form you need." },
+    "idx.ladder1.k":    { fr: "01 · Le regard", en: "01 · The eye" },
+    "idx.ladder1.t":    { fr: "VITRINE — l'abonnement", en: "VITRINE — the subscription" },
+    "idx.ladder1.p":    { fr: "Une marque disséquée chaque semaine. Le radar qui s'installe et ne s'éteint plus.", en: "A brand dissected every week. The radar that installs itself and never switches off." },
+    "idx.ladder1.price": { fr: "15€ / mois", en: "€15 / mo" },
+    "idx.ladder2.k":    { fr: "02 · Les instruments", en: "02 · The instruments" },
+    "idx.ladder2.t":    { fr: "L'Arsenal — le toolkit", en: "The Arsenal — the toolkit" },
+    "idx.ladder2.p":    { fr: "Les cinq instruments exacts de la méthode, pour faire tourner la grille sur ta propre marque.", en: "The five exact instruments of the method, to run the grid on your own brand." },
+    "idx.ladder2.price": { fr: "147€ one-shot", en: "€147 one-time" },
+    "idx.ladder3.k":    { fr: "03 · L'exécution", en: "03 · The execution" },
+    "idx.ladder3.t":    { fr: "Strawberry — la commission", en: "Strawberry — the commission" },
+    "idx.ladder3.p":    { fr: "Quand c'est ta marque, faite en entier, par l'œil qui a construit la méthode.", en: "When it's your brand, done in full, by the eye that built the method." },
+    "idx.ladder3.price": { fr: "sur commande", en: "on commission" },
+    "idx.ladder.cur":   { fr: "actuel", en: "current" },
+
+    // METHOD — section L'Arsenal (les instruments)
+    "meth.s5.num":      { fr: "05", en: "05" },
+    "meth.s5.title":    { fr: "L'Arsenal — les instruments", en: "The Arsenal — the instruments" },
+    "meth.s5.lead":     { fr: "VITRINE entraîne l'œil par répétition. L'Arsenal, lui, te met la structure entre les mains : les cinq instruments exacts que j'utilise en commission, pour faire tourner la grille sur ta propre marque. L'un sans l'autre est incomplet — l'œil sans structure hésite, la structure sans œil s'applique à l'aveugle.", en: "VITRINE trains the eye through repetition. The Arsenal puts the structure in your hands: the five exact instruments I use in commissions, to run the grid on your own brand. Either without the other is incomplete — the eye without structure hesitates, structure without the eye applies itself blind." },
+    "ars.m1.t":         { fr: "Differentiation Diagnostic", en: "Differentiation Diagnostic" },
+    "ars.m1.d":         { fr: "Isoler ce qui distingue réellement la marque.", en: "Isolate what actually sets the brand apart." },
+    "ars.m2.t":         { fr: "Narrative Platform", en: "Narrative Platform" },
+    "ars.m2.d":         { fr: "Construire le récit de marque.", en: "Build the brand's core narrative." },
+    "ars.m3.t":         { fr: "Language System", en: "Language System" },
+    "ars.m3.d":         { fr: "Ton, lexique, règles d'écriture.", en: "Tone, lexicon, writing rules." },
+    "ars.m4.t":         { fr: "Deployment Kit", en: "Deployment Kit" },
+    "ars.m4.d":         { fr: "Déploiement sur les supports.", en: "Deployment across touchpoints." },
+    "ars.m5.t":         { fr: "Coherence Guide", en: "Coherence Guide" },
+    "ars.m5.d":         { fr: "Cohérence globale — le verrou stratégique, volontairement incomplet sur l'extraction de la singularité (la part non-automatisable de la méthode).", en: "Global coherence — the strategic lock, deliberately incomplete on extracting singularity (the non-automatable part of the method)." },
+    "ars.deal.l":       { fr: "Ce que ça transmet", en: "What it transmits" },
+    "ars.deal.p":       { fr: "La structure exacte suivie en commission : frameworks, cas anonymisés, questions d'onboarding. Pas l'œil — ça, c'est VITRINE qui l'installe, semaine après semaine.", en: "The exact structure followed in commissions: frameworks, anonymized cases, onboarding questions. Not the eye — that's what VITRINE installs, week after week." },
+    "meth.s5.cta":      { fr: "Obtenir l'Arsenal →", en: "Get the Arsenal →" },
+
+    // PRICING — l'échelle complète
+    "pr.h1b":           { fr: "Entrer dans<br>la méthode.", en: "Step into<br>the method." },
+    "pr.baseline2":     { fr: "Trois manières d'entrer, une seule méthode. Du radar hebdomadaire à l'exécution complète — sans jamais diluer.", en: "Three ways in, one method. From the weekly radar to full execution — never diluted." },
+
+    "pr.ars.num":       { fr: "02", en: "02" },
+    "pr.ars.title":     { fr: "L'Arsenal — le toolkit", en: "The Arsenal — the toolkit" },
+    "pr.ars.lead":      { fr: "La structure, une fois pour toutes. Un paiement, pas un abonnement. Les cinq instruments de la méthode, prêts à tourner sur ta marque.", en: "The structure, once and for all. One payment, not a subscription. The five instruments of the method, ready to run on your brand." },
+    "pr.ars.t1.badge":  { fr: "Toolkit", en: "Toolkit" },
+    "pr.ars.t1.f1":     { fr: "Les 5 modules complets", en: "All 5 full modules" },
+    "pr.ars.t1.f2":     { fr: "Frameworks vides + cas anonymisés", en: "Empty frameworks + anonymized cases" },
+    "pr.ars.t1.f3":     { fr: "Questions exactes d'onboarding", en: "Exact onboarding questions" },
+    "pr.ars.t1.f4":     { fr: "Format Notion + PDF", en: "Notion + PDF format" },
+    "pr.ars.t2.badge":  { fr: "Toolkit + diagnostic", en: "Toolkit + diagnostic" },
+    "pr.ars.t2.f1":     { fr: "Tout le contenu du toolkit seul", en: "Everything in the toolkit-only tier" },
+    "pr.ars.t2.f2":     { fr: "Module 5 enrichi d'une checklist d'auto-évaluation", en: "Module 5 enriched with a self-assessment checklist" },
+    "pr.ars.t2.f3":     { fr: "Accès aux mises à jour du toolkit", en: "Access to toolkit updates" },
+    "pr.ars.t2.f4":     { fr: "Format Notion + PDF + Figma (option visuelle)", en: "Notion + PDF + Figma format (visual option)" },
+    "pr.ars.buy":       { fr: "Obtenir l'Arsenal", en: "Get the Arsenal" },
+    "pr.ars.note":      { fr: "Le module 5 reste volontairement incomplet sur l'extraction de la singularité — la seule part que ni le toolkit ni personne d'autre que l'œil ne peut automatiser.", en: "Module 5 stays deliberately incomplete on extracting singularity — the one part neither the toolkit nor anyone but the eye can automate." },
+
+    "pr.str.num":       { fr: "03", en: "03" },
+    "pr.str.title":     { fr: "Strawberry — la commission", en: "Strawberry — the commission" },
+    "pr.str.lead":      { fr: "Le haut de l'échelle : ta marque, faite en entier. La structure ET l'œil, appliqués en privé.", en: "The top of the ladder: your brand, done in full. Structure AND the eye, applied privately." },
+    "pr.str.amount":    { fr: "~4500€", en: "~€4,500" },
+    "pr.str.f1":        { fr: "Exécution complète par Strawberry Production", en: "Full execution by Strawberry Production" },
+    "pr.str.f2":        { fr: "L'œil et l'expérience qu'aucun toolkit ne transmet", en: "The eye and experience no toolkit transmits" },
+    "pr.str.f3":        { fr: "Commissions limitées par trimestre", en: "Commissions limited per quarter" },
+    "pr.str.cta":       { fr: "Travailler avec Strawberry →", en: "Work with Strawberry →" },
+
+    "pr.q5":            { fr: "Quelle différence entre l'abonnement VITRINE et l'Arsenal ?", en: "What's the difference between the VITRINE subscription and the Arsenal?" },
+    "pr.a5":            { fr: "VITRINE, c'est le regard : une marque disséquée chaque semaine, pour installer la grille dans ton œil. L'Arsenal, c'est la structure : les instruments pour faire tourner cette grille sur ta propre marque, quand tu veux. L'abonnement forme le réflexe ; le toolkit donne l'outil. Beaucoup prennent les deux.", en: "VITRINE is the eye: a brand dissected every week, to install the grid in your eye. The Arsenal is the structure: the instruments to run that grid on your own brand, whenever you want. The subscription builds the reflex; the toolkit gives the tool. Many take both." },
+
+    // A11Y
+    "a11y.menu":        { fr: "Ouvrir le menu", en: "Open menu" },
+    "a11y.fr":          { fr: "Français", en: "French" },
+    "a11y.en":          { fr: "Anglais", en: "English" }
   };
 
-  /* ---------- 2. APPLICATION DE LA LANGUE ---------- */
+  const LANGS = ["fr", "en"];
+
+  /* ---------- 2. LANGUE : url ?lang= > localStorage > fr ---------- */
   function getLang() {
-    return localStorage.getItem("vitrine_lang") || "fr";
+    const p = new URLSearchParams(window.location.search).get("lang");
+    if (p && LANGS.includes(p)) return p;
+    const s = localStorage.getItem("vitrine_lang");
+    if (s && LANGS.includes(s)) return s;
+    return "fr";
   }
 
   function setLang(lang) {
+    if (!LANGS.includes(lang)) lang = "fr";
     localStorage.setItem("vitrine_lang", lang);
     document.documentElement.setAttribute("lang", lang);
+
+    // texte visible
     document.querySelectorAll("[data-i18n]").forEach(el => {
-      const key = el.getAttribute("data-i18n");
-      const entry = I18N[key];
-      if (entry && entry[lang]) {
-        el.innerHTML = entry[lang];
-      }
+      const entry = I18N[el.getAttribute("data-i18n")];
+      if (entry && entry[lang] != null) el.innerHTML = entry[lang];
     });
+    // attribut content (meta description)
+    document.querySelectorAll("[data-i18n-content]").forEach(el => {
+      const entry = I18N[el.getAttribute("data-i18n-content")];
+      if (entry && entry[lang] != null) el.setAttribute("content", entry[lang]);
+    });
+    // attribut aria-label
+    document.querySelectorAll("[data-i18n-aria]").forEach(el => {
+      const entry = I18N[el.getAttribute("data-i18n-aria")];
+      if (entry && entry[lang] != null) el.setAttribute("aria-label", entry[lang]);
+    });
+
+    // toggle langue : état visuel + accessible
     document.querySelectorAll(".lang-toggle button").forEach(btn => {
-      btn.classList.toggle("active", btn.dataset.lang === lang);
+      const active = btn.dataset.lang === lang;
+      btn.classList.toggle("active", active);
+      btn.setAttribute("aria-pressed", active ? "true" : "false");
     });
+
+    // garder l'URL cohérente avec hreflang, sans recharger
+    try {
+      const u = new URL(window.location.href);
+      u.searchParams.set("lang", lang);
+      window.history.replaceState({}, "", u);
+    } catch (e) { /* no-op */ }
   }
 
   function initLangToggle() {
@@ -203,10 +368,32 @@
     setLang(getLang());
   }
 
-  /* ---------- 3. SCROLL REVEAL ---------- */
+  /* ---------- 3. NAV MOBILE (hamburger) ---------- */
+  function initMobileNav() {
+    const toggle = document.querySelector(".nav-toggle");
+    const inner = document.querySelector(".topnav-inner");
+    if (!toggle || !inner) return;
+
+    const close = () => {
+      inner.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+    };
+    toggle.addEventListener("click", () => {
+      const open = inner.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    // fermer au clic sur un lien, à Échap, ou au redimensionnement desktop
+    inner.querySelectorAll(".nav-collapse a").forEach(a => a.addEventListener("click", close));
+    document.addEventListener("keydown", e => { if (e.key === "Escape") close(); });
+    window.addEventListener("resize", () => { if (window.innerWidth > 680) close(); });
+  }
+
+  /* ---------- 4. SCROLL REVEAL ---------- */
+  const REDUCE = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
   function initReveal() {
     const items = document.querySelectorAll(".reveal");
-    if (!("IntersectionObserver" in window) || items.length === 0) {
+    if (REDUCE || !("IntersectionObserver" in window) || items.length === 0) {
       items.forEach(el => el.classList.add("in"));
       return;
     }
@@ -221,10 +408,10 @@
     items.forEach(el => io.observe(el));
   }
 
-  /* ---------- 4. TILT 3D AU SURVOL (cartes) ---------- */
+  /* ---------- 5. TILT 3D AU SURVOL (cartes) ---------- */
   function initTilt() {
-    const cards = document.querySelectorAll(".tilt");
-    cards.forEach(card => {
+    if (REDUCE) return; // respect du mouvement réduit
+    document.querySelectorAll(".tilt").forEach(card => {
       card.addEventListener("mousemove", (e) => {
         const r = card.getBoundingClientRect();
         const x = (e.clientX - r.left) / r.width - 0.5;
@@ -237,9 +424,10 @@
     });
   }
 
-  /* ---------- 5. INIT ---------- */
+  /* ---------- 6. INIT ---------- */
   document.addEventListener("DOMContentLoaded", () => {
     initLangToggle();
+    initMobileNav();
     initReveal();
     initTilt();
   });

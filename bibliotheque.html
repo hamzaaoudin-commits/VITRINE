@@ -3,9 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bibliothèque — VITRINE</title>
-<meta name="description" content="La bibliothèque cumulée des fiches VITRINE, triable par secteur.">
+<title data-i18n="title.library">Bibliothèque — VITRINE</title>
+<meta name="description" data-i18n-content="meta.library" content="La bibliothèque cumulée des fiches VITRINE, marques réelles décortiquées, triable par secteur.">
+
+<link rel="canonical" href="https://vitrine.gostrawberryprod.com/bibliotheque">
+<link rel="alternate" hreflang="fr" href="https://vitrine.gostrawberryprod.com/bibliotheque?lang=fr">
+<link rel="alternate" hreflang="en" href="https://vitrine.gostrawberryprod.com/bibliotheque?lang=en">
+<link rel="alternate" hreflang="x-default" href="https://vitrine.gostrawberryprod.com/bibliotheque">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#ece8df">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VITRINE">
+<meta property="og:title" content="Bibliothèque — VITRINE">
+<meta property="og:description" content="La bibliothèque cumulée des fiches VITRINE. Des marques réelles décortiquées, triable par secteur.">
+<meta property="og:url" content="https://vitrine.gostrawberryprod.com/bibliotheque">
+<meta property="og:image" content="https://vitrine.gostrawberryprod.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bibliothèque — VITRINE">
+<meta name="twitter:description" content="Des marques réelles décortiquées, triable par secteur.">
+<meta name="twitter:image" content="https://vitrine.gostrawberryprod.com/og-image.png">
+
 <link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Bibliothèque VITRINE",
+  "description": "Bibliothèque cumulée des analyses de marques VITRINE.",
+  "isPartOf": { "@type": "WebSite", "name": "VITRINE", "url": "https://vitrine.gostrawberryprod.com/" },
+  "publisher": { "@type": "Organization", "name": "Strawberry Production", "brand": "VITRINE" }
+}
+</script>
 </head>
 <body>
 <div class="grid-backdrop"></div>
@@ -13,18 +51,23 @@
 <nav class="topnav">
   <div class="topnav-inner">
     <a href="index.html" class="brand-mark">VITRINE<span>.</span></a>
-    <div class="nav-links">
-      <a href="index.html" data-i18n="nav.home">Accueil</a>
-      <a href="bibliotheque.html" class="active" data-i18n="nav.library">Bibliothèque</a>
-      <a href="methode.html" data-i18n="nav.method">Méthode</a>
-      <a href="abonnement.html" data-i18n="nav.pricing">Abonnement</a>
-    </div>
-    <div style="display:flex; align-items:center; gap:14px;">
-      <div class="lang-toggle">
-        <button data-lang="fr">FR</button>
-        <button data-lang="en">EN</button>
+    <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-collapse" data-i18n-aria="a11y.menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-collapse" id="nav-collapse">
+      <div class="nav-links">
+        <a href="index.html" data-i18n="nav.home">Accueil</a>
+        <a href="bibliotheque.html" class="active" data-i18n="nav.library">Bibliothèque</a>
+        <a href="methode.html" data-i18n="nav.method">Méthode</a>
+        <a href="abonnement.html" data-i18n="nav.pricing">Abonnement</a>
       </div>
-      <a href="abonnement.html" class="nav-cta" data-i18n="nav.cta"><span class="fill"></span>S'abonner</a>
+      <div class="nav-right">
+        <div class="lang-toggle">
+          <button data-lang="fr" aria-label="Français" data-i18n-aria="a11y.fr" aria-pressed="true">FR</button>
+          <button data-lang="en" aria-label="English" data-i18n-aria="a11y.en" aria-pressed="false">EN</button>
+        </div>
+        <a href="abonnement.html" class="nav-cta" data-i18n="nav.cta"><span class="fill"></span>S'abonner</a>
+      </div>
     </div>
   </div>
 </nav>
@@ -41,76 +84,96 @@
   </div>
 
   <div class="sec reveal">
-    <div class="sec-head"><span class="sec-num" data-i18n="lib.s1.num">01</span><span class="sec-title" data-i18n="lib.s1.title">Fiche complète — exemple</span></div>
+    <div class="sec-head"><span class="sec-num" data-i18n="lib.s1.num">01</span><span class="sec-title" data-i18n="lib.s1.title">Fiche complète — en accès libre</span></div>
     <div class="fiche tilt">
       <div class="fiche-head">
         <div>
           <span class="fiche-tag" data-i18n="lib.fiche.tag">Fiche n°014 — publiée cette semaine</span>
-          <div class="fiche-brand" data-i18n="fiche.brand">Marque analysée</div>
+          <div class="fiche-brand" data-i18n="fiche.brand">Sézane</div>
         </div>
-        <span class="fiche-sector" data-i18n="fiche.sector">Secteur · DNVB</span>
+        <span class="fiche-sector" data-i18n="fiche.sector">Secteur · Mode / DNVB</span>
       </div>
       <div class="fiche-body">
         <div class="fiche-field">
           <h4 data-i18n="fiche.works">Ce qui marche</h4>
-          <p data-i18n="fiche.works.p">Le point de positionnement net, identifié et nommé clairement.</p>
+          <p data-i18n="fiche.works.p">Un « premium accessible » made-in-France tenu sans dévier : récit d'atelier, rareté orchestrée, retail expérientiel (l'Appartement) et mission (la fondation DEMAIN) cousus dans la marque, pas collés dessus.</p>
         </div>
         <div class="fiche-field">
           <h4 data-i18n="fiche.blurry">Ce qui est flou</h4>
-          <p data-i18n="fiche.blurry.p">La contradiction ou la zone non résolue du discours de marque.</p>
+          <p data-i18n="fiche.blurry.p">La promesse de rareté et de pièce « qui dure » cohabite mal avec une cadence de sorties très soutenue. Plus les drops s'enchaînent, plus « spécial » glisse vers « disponible ».</p>
         </div>
         <div class="fiche-field">
           <h4 data-i18n="fiche.reposition">Repositionnement</h4>
-          <p data-i18n="fiche.reposition.p">La direction tranchée que je proposerais à la place.</p>
+          <p data-i18n="fiche.reposition.p">Trancher : soit ralentir et éditorialiser la cadence pour honorer la rareté, soit l'assumer et déplacer la promesse de « rareté » vers « constance de style ». L'entre-deux use la valeur perçue.</p>
         </div>
+      </div>
+      <div class="fiche-verdict">
+        <span class="vl" data-i18n="libf.verdict.l">Le verdict</span>
+        <p data-i18n="libf.verdict.p">Une des marques françaises les mieux tenues de sa génération — à un cheveu de diluer ce qui la rend désirable. Le risque n'est pas la qualité, c'est le rythme.</p>
       </div>
     </div>
   </div>
 
   <div class="sec reveal">
     <div class="sec-head"><span class="sec-num" data-i18n="lib.s2.num">02</span><span class="sec-title" data-i18n="lib.s2.title">Les fiches précédentes</span></div>
-    <p style="margin-bottom:10px;" data-i18n="lib.s2.p">Réservé aux abonnés. Aperçu de la structure de la bibliothèque, triable par secteur.</p>
+    <p style="margin-bottom:10px;" data-i18n="lib.s2.p">Aperçu des fiches déjà publiées. Le corps complet de chacune est réservé aux abonnés ; la bibliothèque est triable par secteur.</p>
 
     <div>
       <div class="fiche-row">
         <span class="fr-num">N°013</span>
         <div>
-          <span class="fr-name" data-i18n="lib.row13.name">Marque — Mode & accessoires</span>
-          <span class="fr-desc" data-i18n="lib.row13.desc">Un positionnement premium affirmé, contredit par une distribution de masse.</span>
+          <span class="fr-name" data-i18n="lib.row13.name">Asphalte — Mode homme / DNVB</span>
+          <span class="fr-desc" data-i18n="lib.row13.desc">La pré-commande érigée en manifeste anti-gaspillage — limpide. Mais le récit produit s'éparpille à mesure que le catalogue s'élargit.</span>
         </div>
         <span class="fr-sector" data-i18n="lib.row13.sector">Mode</span>
       </div>
       <div class="fiche-row">
         <span class="fr-num">N°012</span>
         <div>
-          <span class="fr-name" data-i18n="lib.row12.name">Marque — SaaS B2B</span>
-          <span class="fr-desc" data-i18n="lib.row12.desc">Une promesse claire en landing page, diluée dès le second niveau de navigation.</span>
+          <span class="fr-name" data-i18n="lib.row12.name">Qonto — Fintech / SaaS B2B</span>
+          <span class="fr-desc" data-i18n="lib.row12.desc">« La banque pro qui fait gagner du temps » : nette en landing, diluée dès que l'empilement de features prend le dessus sur la promesse.</span>
         </div>
         <span class="fr-sector" data-i18n="lib.row12.sector">SaaS</span>
       </div>
       <div class="fiche-row">
         <span class="fr-num">N°011</span>
         <div>
-          <span class="fr-name" data-i18n="lib.row11.name">Marque — Food & beverage</span>
-          <span class="fr-desc" data-i18n="lib.row11.desc">Un récit fondateur fort, jamais réinjecté dans le packaging.</span>
+          <span class="fr-name" data-i18n="lib.row11.name">Typology — Beauté / DNVB</span>
+          <span class="fr-desc" data-i18n="lib.row11.desc">Transparence radicale et minimalisme design, très forts. La tension jamais tranchée : laboratoire clinique ou marque lifestyle ?</span>
         </div>
-        <span class="fr-sector" data-i18n="lib.row11.sector">Food</span>
+        <span class="fr-sector" data-i18n="lib.row11.sector">Beauté</span>
       </div>
       <div class="fiche-row">
         <span class="fr-num">N°010</span>
         <div>
-          <span class="fr-name" data-i18n="lib.row10.name">Marque — Luxe / Maison</span>
-          <span class="fr-desc" data-i18n="lib.row10.desc">Une histoire d'artisanat réelle, racontée avec le vocabulaire d'une startup.</span>
+          <span class="fr-name" data-i18n="lib.row10.name">Diptyque — Luxe / Maison</span>
+          <span class="fr-desc" data-i18n="lib.row10.desc">Un récit de maison parisienne rare et cohérent — parfois raconté, en digital, avec un vocabulaire trop startup pour son rang.</span>
         </div>
         <span class="fr-sector" data-i18n="lib.row10.sector">Luxe</span>
       </div>
       <div class="fiche-row">
         <span class="fr-num">N°009</span>
         <div>
-          <span class="fr-name" data-i18n="lib.row09.name">Marque — Hospitalité</span>
-          <span class="fr-desc" data-i18n="lib.row09.desc">Un service haut de gamme, positionné comme accessible — et qui perd les deux publics.</span>
+          <span class="fr-name" data-i18n="lib.row09.name">Big Mamma — Hospitalité</span>
+          <span class="fr-desc" data-i18n="lib.row09.desc">Énergie trattoria festive et accessible, magistralement mise en scène — avec un ticket réel qui crée un écart d'attente à l'addition.</span>
         </div>
         <span class="fr-sector" data-i18n="lib.row09.sector">Hospitalité</span>
+      </div>
+      <div class="fiche-row">
+        <span class="fr-num">N°008</span>
+        <div>
+          <span class="fr-name" data-i18n="lib.row08.name">La Vie — Food / Plant-based</span>
+          <span class="fr-desc" data-i18n="lib.row08.desc">Une mission claire (bien-être animal + goût) et un design superbe — au point, parfois, de passer devant la preuve produit.</span>
+        </div>
+        <span class="fr-sector" data-i18n="lib.row08.sector">Food</span>
+      </div>
+      <div class="fiche-row">
+        <span class="fr-num">N°007</span>
+        <div>
+          <span class="fr-name" data-i18n="lib.row07.name">Le Slip Français — Mode / DNVB</span>
+          <span class="fr-desc" data-i18n="lib.row07.desc">Le made-in-France en étendard, porté par un humour de marque redoutable — qui a parfois éclipsé la montée en gamme réelle.</span>
+        </div>
+        <span class="fr-sector" data-i18n="lib.row07.sector">Mode</span>
       </div>
     </div>
   </div>
@@ -123,6 +186,15 @@
   <div class="sec reveal">
     <a href="abonnement.html" class="btn btn-primary" data-i18n="lib.cta"><span class="fill"></span>Accéder à la bibliothèque complète</a>
   </div>
+
+  <div class="bridge reveal">
+    <span class="b-kicker" data-i18n="bridge.kicker">En privé</span>
+    <h3 data-i18n="bridge.title">Cette lecture, sur ta marque.</h3>
+    <p data-i18n="bridge.p">VITRINE dissèque des marques publiques. Quand c'est la tienne, ça se passe en commission privée : Strawberry Production applique la même méthode S.T.R.A.W. en profondeur — audit, repositionnement, direction de marque.</p>
+    <a href="https://gostrawberryprod.com" class="btn-bridge" data-i18n="bridge.cta">Travailler avec Strawberry →</a>
+  </div>
+
+  <p class="disclaimer" data-i18n="disclaimer">Analyses indépendantes. VITRINE n'est lié à aucune des marques citées, qui n'ont pas commandé ces lectures.</p>
 
   <footer class="sitefoot">
     <span data-i18n="footer.brand">Strawberry Production</span>

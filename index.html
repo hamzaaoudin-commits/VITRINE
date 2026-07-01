@@ -3,9 +3,72 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VITRINE — La lecture du marché, chaque semaine</title>
-<meta name="description" content="Un abonnement où chaque semaine, une marque réelle est décortiquée : ce qui marche, ce qui est flou, comment la repositionner.">
+<title data-i18n="title.index">VITRINE — La lecture du marché, chaque semaine</title>
+<meta name="description" data-i18n-content="meta.index" content="Un abonnement où chaque semaine une marque réelle est disséquée : ce qui marche, ce qui est flou, comment la repositionner. Un radar de positionnement, pas un cours.">
+
+<link rel="canonical" href="https://vitrine.gostrawberryprod.com/">
+<link rel="alternate" hreflang="fr" href="https://vitrine.gostrawberryprod.com/?lang=fr">
+<link rel="alternate" hreflang="en" href="https://vitrine.gostrawberryprod.com/?lang=en">
+<link rel="alternate" hreflang="x-default" href="https://vitrine.gostrawberryprod.com/">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#ece8df">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VITRINE">
+<meta property="og:title" content="VITRINE — La lecture du marché, chaque semaine">
+<meta property="og:description" content="Chaque semaine, une marque réelle disséquée en public. Un radar de positionnement, pas un cours. Une publication de Strawberry Production.">
+<meta property="og:url" content="https://vitrine.gostrawberryprod.com/">
+<meta property="og:image" content="https://vitrine.gostrawberryprod.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="VITRINE — La lecture du marché, chaque semaine">
+<meta name="twitter:description" content="Chaque semaine, une marque réelle disséquée en public. Un radar de positionnement, pas un cours.">
+<meta name="twitter:image" content="https://vitrine.gostrawberryprod.com/og-image.png">
+
 <link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://vitrine.gostrawberryprod.com/#org",
+      "name": "Strawberry Production",
+      "url": "https://gostrawberryprod.com",
+      "brand": "VITRINE"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://vitrine.gostrawberryprod.com/#site",
+      "name": "VITRINE",
+      "url": "https://vitrine.gostrawberryprod.com/",
+      "publisher": { "@id": "https://vitrine.gostrawberryprod.com/#org" },
+      "inLanguage": ["fr", "en"]
+    },
+    {
+      "@type": "Service",
+      "name": "VITRINE — abonnement d'analyses de marques",
+      "serviceType": "Analyse de positionnement de marque",
+      "provider": { "@id": "https://vitrine.gostrawberryprod.com/#org" },
+      "description": "Une fiche d'analyse de marque publique par semaine, selon la méthode S.T.R.A.W.",
+      "offers": {
+        "@type": "Offer",
+        "price": "15",
+        "priceCurrency": "EUR",
+        "description": "Abonnement mensuel — prix fondateur"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <div class="grid-backdrop"></div>
@@ -13,18 +76,23 @@
 <nav class="topnav">
   <div class="topnav-inner">
     <a href="index.html" class="brand-mark">VITRINE<span>.</span></a>
-    <div class="nav-links">
-      <a href="index.html" class="active" data-i18n="nav.home">Accueil</a>
-      <a href="bibliotheque.html" data-i18n="nav.library">Bibliothèque</a>
-      <a href="methode.html" data-i18n="nav.method">Méthode</a>
-      <a href="abonnement.html" data-i18n="nav.pricing">Abonnement</a>
-    </div>
-    <div style="display:flex; align-items:center; gap:14px;">
-      <div class="lang-toggle">
-        <button data-lang="fr">FR</button>
-        <button data-lang="en">EN</button>
+    <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-collapse" data-i18n-aria="a11y.menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-collapse" id="nav-collapse">
+      <div class="nav-links">
+        <a href="index.html" class="active" data-i18n="nav.home">Accueil</a>
+        <a href="bibliotheque.html" data-i18n="nav.library">Bibliothèque</a>
+        <a href="methode.html" data-i18n="nav.method">Méthode</a>
+        <a href="abonnement.html" data-i18n="nav.pricing">Abonnement</a>
       </div>
-      <a href="abonnement.html" class="nav-cta" data-i18n="nav.cta"><span class="fill"></span>S'abonner</a>
+      <div class="nav-right">
+        <div class="lang-toggle">
+          <button data-lang="fr" aria-label="Français" data-i18n-aria="a11y.fr" aria-pressed="true">FR</button>
+          <button data-lang="en" aria-label="English" data-i18n-aria="a11y.en" aria-pressed="false">EN</button>
+        </div>
+        <a href="abonnement.html" class="nav-cta" data-i18n="nav.cta"><span class="fill"></span>S'abonner</a>
+      </div>
     </div>
   </div>
 </nav>
@@ -37,10 +105,10 @@
       <span data-i18n="idx.kicker2">Paris — édition hebdomadaire</span>
     </div>
     <h1 data-i18n="idx.h1">Ce que je vois<br>quand je regarde<br>une marque.</h1>
-    <p class="baseline" data-i18n="idx.baseline">Chaque semaine, une marque réelle, décortiquée publiquement — ce qui marche, ce qui est flou, comment je la repositionnerais. Pas un cours. Une grille de lecture, appliquée en direct, semaine après semaine.</p>
+    <p class="baseline" data-i18n="idx.baseline">Chaque semaine, une marque réelle disséquée en public — ce qui marche, ce qui est flou, comment je la repositionnerais. Ce n'est pas un cours : c'est un radar. La lecture du marché que tes concurrents n'ont pas, semaine après semaine.</p>
     <div class="cta-row">
       <a href="abonnement.html" class="btn btn-primary" data-i18n="idx.cta1"><span class="fill"></span>S'abonner — 15€/mois</a>
-      <a href="bibliotheque.html" class="btn btn-ghost" data-i18n="idx.cta2"><span class="fill"></span>Voir un exemple de fiche</a>
+      <a href="#fiche" class="btn btn-ghost" data-i18n="idx.cta2"><span class="fill"></span>Voir la fiche de la semaine</a>
     </div>
 
     <div class="hero-stage">
@@ -64,36 +132,36 @@
         <p data-i18n="idx.s1.p1">VITRINE n'enseigne rien frontalement. C'est une écoute du marché en direct : chaque fiche analyse une marque publique, pas un client, avec la même grille que celle utilisée pour les case studies Strawberry.</p>
       </div>
       <div>
-        <span class="label" data-i18n="idx.s1.l2">Ce que ça construit</span>
-        <p class="pull" data-i18n="idx.s1.p2">Une bibliothèque qui s'épaissit chaque semaine — et qui apprend, sans jamais l'expliquer, à voir une marque comme je la vois.</p>
+        <span class="label" data-i18n="idx.s1.l2">Ce que ça installe</span>
+        <p class="pull" data-i18n="idx.s1.p2">Un radar qui ne s'éteint plus. À mesure que la bibliothèque s'épaissit, tu lis le positionnement d'une marque en quelques secondes — là où le marché met des mois.</p>
       </div>
     </div>
   </div>
 
-  <div class="sec reveal">
-    <div class="sec-head"><span class="sec-num" data-i18n="idx.s2.num">02</span><span class="sec-title" data-i18n="idx.s2.title">Une fiche, en exemple</span></div>
-    <p style="margin-bottom:26px;" data-i18n="idx.s2.p">Format fixe, lecture courte. La structure ne change jamais — seule la marque change.</p>
+  <div class="sec reveal" id="fiche">
+    <div class="sec-head"><span class="sec-num" data-i18n="idx.s2.num">02</span><span class="sec-title" data-i18n="idx.s2.title">La fiche de la semaine</span></div>
+    <p style="margin-bottom:26px;" data-i18n="idx.s2.p">Format fixe, lecture courte. La structure ne change jamais — seule la marque change. Celle-ci est en accès libre.</p>
 
     <div class="fiche tilt">
       <div class="fiche-head">
         <div>
-          <span class="fiche-tag" data-i18n="fiche.tag">Fiche n°014 — 12 min de lecture</span>
-          <div class="fiche-brand" data-i18n="fiche.brand">Marque analysée</div>
+          <span class="fiche-tag" data-i18n="fiche.tag">Fiche n°014 — 11 min de lecture</span>
+          <div class="fiche-brand" data-i18n="fiche.brand">Sézane</div>
         </div>
-        <span class="fiche-sector" data-i18n="fiche.sector">Secteur · DNVB</span>
+        <span class="fiche-sector" data-i18n="fiche.sector">Secteur · Mode / DNVB</span>
       </div>
       <div class="fiche-body">
         <div class="fiche-field">
           <h4 data-i18n="fiche.works">Ce qui marche</h4>
-          <p data-i18n="fiche.works.p">Le point de positionnement net, identifié et nommé.</p>
+          <p data-i18n="fiche.works.p">Un « premium accessible » made-in-France tenu sans dévier.</p>
         </div>
         <div class="fiche-field">
           <h4 data-i18n="fiche.blurry">Ce qui est flou</h4>
-          <p data-i18n="fiche.blurry.p">La contradiction ou la zone non résolue du discours de marque.</p>
+          <p data-i18n="fiche.blurry.p">La promesse de rareté cohabite mal avec une cadence de sorties très soutenue.</p>
         </div>
         <div class="fiche-field">
           <h4 data-i18n="fiche.reposition">Repositionnement</h4>
-          <p data-i18n="fiche.reposition.p">Comment je trancherais, en une direction nette.</p>
+          <p data-i18n="fiche.reposition.p">Trancher : honorer la rareté en ralentissant, ou assumer le rythme et déplacer la promesse.</p>
         </div>
       </div>
     </div>
@@ -102,10 +170,36 @@
   <div class="sec reveal">
     <div class="sec-head"><span class="sec-num" data-i18n="idx.s3.num">03</span><span class="sec-title" data-i18n="idx.s3.title">Pour qui</span></div>
     <ul class="checks">
-      <li><span class="mk">→</span><p data-i18n="idx.s3.l1">Fondateurs et marketeurs qui veulent affiner leur œil sur le positionnement, fiche après fiche.</p></li>
-      <li><span class="mk">→</span><p data-i18n="idx.s3.l2">Consultants et freelances en branding qui veulent une référence externe pour calibrer leurs propres analyses.</p></li>
-      <li><span class="mk">→</span><p data-i18n="idx.s3.l3">Quiconque veut comprendre comment une marque se construit — ou se trahit — sans suivre une formation.</p></li>
+      <li><span class="mk">→</span><p data-i18n="idx.s3.l1">Fondateurs et marketeurs qui veulent lire le positionnement d'un concurrent avant lui — et arbitrer plus vite.</p></li>
+      <li><span class="mk">→</span><p data-i18n="idx.s3.l2">Consultants et freelances en branding qui veulent une référence externe pour calibrer leur propre regard sur chaque dossier.</p></li>
+      <li><span class="mk">→</span><p data-i18n="idx.s3.l3">Quiconque construit une marque et refuse d'avoir un temps de retard sur ce qui se joue vraiment dans son marché.</p></li>
     </ul>
+  </div>
+
+  <div class="sec reveal">
+    <div class="sec-head"><span class="sec-num" data-i18n="idx.s4.num">04</span><span class="sec-title" data-i18n="idx.s4.title">L'offre, en trois temps</span></div>
+    <p style="margin-bottom:26px;" data-i18n="idx.s4.p">Un même regard, trois manières d'y entrer — du plus léger au plus engageant. Rien de dilué : une seule méthode, S.T.R.A.W., déclinée selon ce dont tu as besoin.</p>
+    <div class="ladder">
+      <div class="rung is-current">
+        <span class="r-badge" data-i18n="idx.ladder.cur">actuel</span>
+        <span class="r-k" data-i18n="idx.ladder1.k">01 · Le regard</span>
+        <div class="r-t" data-i18n="idx.ladder1.t">VITRINE — l'abonnement</div>
+        <p class="r-p" data-i18n="idx.ladder1.p">Une marque disséquée chaque semaine. Le radar qui s'installe et ne s'éteint plus.</p>
+        <span class="r-price" data-i18n="idx.ladder1.price">15€ / mois</span>
+      </div>
+      <div class="rung">
+        <span class="r-k" data-i18n="idx.ladder2.k">02 · Les instruments</span>
+        <div class="r-t" data-i18n="idx.ladder2.t">L'Arsenal — le toolkit</div>
+        <p class="r-p" data-i18n="idx.ladder2.p">Les cinq instruments exacts de la méthode, pour faire tourner la grille sur ta propre marque.</p>
+        <span class="r-price" data-i18n="idx.ladder2.price">147€ one-shot</span>
+      </div>
+      <div class="rung">
+        <span class="r-k" data-i18n="idx.ladder3.k">03 · L'exécution</span>
+        <div class="r-t" data-i18n="idx.ladder3.t">Strawberry — la commission</div>
+        <p class="r-p" data-i18n="idx.ladder3.p">Quand c'est ta marque, faite en entier, par l'œil qui a construit la méthode.</p>
+        <span class="r-price" data-i18n="idx.ladder3.price">sur commande</span>
+      </div>
+    </div>
   </div>
 
   <div class="stats reveal">
@@ -122,6 +216,15 @@
       <div class="lbl" data-i18n="idx.stat3">bibliothèque cumulée</div>
     </div>
   </div>
+
+  <div class="bridge reveal">
+    <span class="b-kicker" data-i18n="bridge.kicker">En privé</span>
+    <h3 data-i18n="bridge.title">Cette lecture, sur ta marque.</h3>
+    <p data-i18n="bridge.p">VITRINE dissèque des marques publiques. Quand c'est la tienne, ça se passe en commission privée : Strawberry Production applique la même méthode S.T.R.A.W. en profondeur — audit, repositionnement, direction de marque.</p>
+    <a href="https://gostrawberryprod.com" class="btn-bridge" data-i18n="bridge.cta">Travailler avec Strawberry →</a>
+  </div>
+
+  <p class="disclaimer" data-i18n="disclaimer">Analyses indépendantes. VITRINE n'est lié à aucune des marques citées, qui n'ont pas commandé ces lectures.</p>
 
   <footer class="sitefoot">
     <span data-i18n="footer.brand">Strawberry Production</span>

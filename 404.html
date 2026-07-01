@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="title.404">Page introuvable — VITRINE</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#ece8df">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="grid-backdrop"></div>
+
+<nav class="topnav">
+  <div class="topnav-inner">
+    <a href="index.html" class="brand-mark">VITRINE<span>.</span></a>
+    <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-collapse" data-i18n-aria="a11y.menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-collapse" id="nav-collapse">
+      <div class="nav-links">
+        <a href="index.html" data-i18n="nav.home">Accueil</a>
+        <a href="bibliotheque.html" data-i18n="nav.library">Bibliothèque</a>
+        <a href="methode.html" data-i18n="nav.method">Méthode</a>
+        <a href="abonnement.html" data-i18n="nav.pricing">Abonnement</a>
+      </div>
+      <div class="nav-right">
+        <div class="lang-toggle">
+          <button data-lang="fr" aria-label="Français" data-i18n-aria="a11y.fr" aria-pressed="true">FR</button>
+          <button data-lang="en" aria-label="English" data-i18n-aria="a11y.en" aria-pressed="false">EN</button>
+        </div>
+        <a href="abonnement.html" class="nav-cta" data-i18n="nav.cta"><span class="fill"></span>S'abonner</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="masthead nf-wrap">
+    <div class="kicker">
+      <span data-i18n="nf.kicker1">Erreur 404</span>
+      <span data-i18n="nf.kicker2">Page introuvable</span>
+    </div>
+    <h1 data-i18n="nf.h1">Cette fiche<br>n'existe pas.</h1>
+    <p class="baseline" data-i18n="nf.p">La page que vous cherchez a été déplacée, ou n'a jamais été publiée. La bibliothèque, elle, est toujours là.</p>
+    <div class="nf-actions">
+      <a href="index.html" class="btn btn-primary" data-i18n="nf.cta1"><span class="fill"></span>Retour à l'accueil</a>
+      <a href="bibliotheque.html" class="btn btn-ghost" data-i18n="nf.cta2"><span class="fill"></span>Voir la bibliothèque</a>
+    </div>
+  </div>
+
+  <footer class="sitefoot">
+    <span data-i18n="footer.brand">Strawberry Production</span>
+    <span data-i18n="footer.tag">VITRINE — base de données d'analyses de marques</span>
+  </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

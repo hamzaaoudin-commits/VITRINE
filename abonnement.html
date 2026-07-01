@@ -3,9 +3,63 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abonnement — VITRINE</title>
-<meta name="description" content="S'abonner à VITRINE : une fiche d'analyse de marque par semaine, 15 à 25€ par mois.">
+<title data-i18n="title.pricing">Abonnement — VITRINE</title>
+<meta name="description" data-i18n-content="meta.pricing" content="S'abonner à VITRINE : une fiche d'analyse de marque par semaine, 15 à 25€ par mois. Sans engagement.">
+
+<link rel="canonical" href="https://vitrine.gostrawberryprod.com/abonnement">
+<link rel="alternate" hreflang="fr" href="https://vitrine.gostrawberryprod.com/abonnement?lang=fr">
+<link rel="alternate" hreflang="en" href="https://vitrine.gostrawberryprod.com/abonnement?lang=en">
+<link rel="alternate" hreflang="x-default" href="https://vitrine.gostrawberryprod.com/abonnement">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#ece8df">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VITRINE">
+<meta property="og:title" content="Abonnement — VITRINE">
+<meta property="og:description" content="Trois manières d'entrer dans la méthode : l'abonnement VITRINE, le toolkit Arsenal, la commission Strawberry.">
+<meta property="og:url" content="https://vitrine.gostrawberryprod.com/abonnement">
+<meta property="og:image" content="https://vitrine.gostrawberryprod.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Abonnement — VITRINE">
+<meta name="twitter:description" content="Trois manières d'entrer dans la méthode, une seule grille — sans jamais diluer.">
+<meta name="twitter:image" content="https://vitrine.gostrawberryprod.com/og-image.png">
+
 <link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Les marques analysées sont-elles mes clients ?", "acceptedAnswer": { "@type": "Answer", "text": "Non. VITRINE analyse exclusivement des marques publiques, jamais des clients de Strawberry Production. C'est une écoute du marché, pas un audit commandé." } },
+    { "@type": "Question", "name": "Puis-je suggérer une marque à analyser ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, les abonnés peuvent proposer des marques. La sélection finale reste éditoriale, pour garder une diversité de secteurs dans la bibliothèque." } },
+    { "@type": "Question", "name": "Que se passe-t-il si je résilie ?", "acceptedAnswer": { "@type": "Answer", "text": "Vous perdez l'accès à la bibliothèque à la fin de la période déjà payée. Le prix fondateur n'est pas garanti en cas de réabonnement ultérieur." } },
+    { "@type": "Question", "name": "Le rythme est-il vraiment hebdomadaire ?", "acceptedAnswer": { "@type": "Answer", "text": "L'objectif est une fiche par semaine, avec une tolérance annoncée à l'avance en cas de cadence ajustée à deux semaines." } },
+    { "@type": "Question", "name": "Quelle différence entre l'abonnement VITRINE et l'Arsenal ?", "acceptedAnswer": { "@type": "Answer", "text": "VITRINE, c'est le regard : une marque disséquée chaque semaine, pour installer la grille dans ton œil. L'Arsenal, c'est la structure : les instruments pour faire tourner cette grille sur ta propre marque. L'abonnement forme le réflexe ; le toolkit donne l'outil." } }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "L'Arsenal — toolkit de la méthode S.T.R.A.W.",
+  "brand": { "@type": "Brand", "name": "VITRINE" },
+  "description": "Le toolkit de la méthode S.T.R.A.W. en cinq modules : frameworks, cas anonymisés, questions d'onboarding.",
+  "offers": [
+    { "@type": "Offer", "name": "Toolkit", "price": "147", "priceCurrency": "EUR" },
+    { "@type": "Offer", "name": "Toolkit + diagnostic", "price": "197", "priceCurrency": "EUR" }
+  ]
+}
+</script>
 </head>
 <body>
 <div class="grid-backdrop"></div>
@@ -13,18 +67,23 @@
 <nav class="topnav">
   <div class="topnav-inner">
     <a href="index.html" class="brand-mark">VITRINE<span>.</span></a>
-    <div class="nav-links">
-      <a href="index.html" data-i18n="nav.home">Accueil</a>
-      <a href="bibliotheque.html" data-i18n="nav.library">Bibliothèque</a>
-      <a href="methode.html" data-i18n="nav.method">Méthode</a>
-      <a href="abonnement.html" class="active" data-i18n="nav.pricing">Abonnement</a>
-    </div>
-    <div style="display:flex; align-items:center; gap:14px;">
-      <div class="lang-toggle">
-        <button data-lang="fr">FR</button>
-        <button data-lang="en">EN</button>
+    <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-collapse" data-i18n-aria="a11y.menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-collapse" id="nav-collapse">
+      <div class="nav-links">
+        <a href="index.html" data-i18n="nav.home">Accueil</a>
+        <a href="bibliotheque.html" data-i18n="nav.library">Bibliothèque</a>
+        <a href="methode.html" data-i18n="nav.method">Méthode</a>
+        <a href="abonnement.html" class="active" data-i18n="nav.pricing">Abonnement</a>
       </div>
-      <a href="#prix" class="nav-cta" data-i18n="nav.cta"><span class="fill"></span>S'abonner</a>
+      <div class="nav-right">
+        <div class="lang-toggle">
+          <button data-lang="fr" aria-label="Français" data-i18n-aria="a11y.fr" aria-pressed="true">FR</button>
+          <button data-lang="en" aria-label="English" data-i18n-aria="a11y.en" aria-pressed="false">EN</button>
+        </div>
+        <a href="#prix" class="nav-cta" data-i18n="nav.cta"><span class="fill"></span>S'abonner</a>
+      </div>
     </div>
   </div>
 </nav>
@@ -36,8 +95,8 @@
       <span data-i18n="pr.kicker1">Abonnement</span>
       <span data-i18n="pr.kicker2">Sans engagement</span>
     </div>
-    <h1 data-i18n="pr.h1">Rejoindre<br>la bibliothèque.</h1>
-    <p class="baseline" data-i18n="pr.baseline">Un prix fondateur, pour les premiers abonnés — verrouillé tant que l'abonnement reste actif.</p>
+    <h1 data-i18n="pr.h1b">Entrer dans<br>la méthode.</h1>
+    <p class="baseline" data-i18n="pr.baseline2">Trois manières d'entrer, une seule méthode. Du radar hebdomadaire à l'exécution complète — sans jamais diluer.</p>
   </div>
 
   <div class="sec reveal" id="prix">
@@ -58,8 +117,53 @@
     </div>
   </div>
 
+  <div class="sec reveal" id="arsenal">
+    <div class="sec-head"><span class="sec-num" data-i18n="pr.ars.num">02</span><span class="sec-title" data-i18n="pr.ars.title">L'Arsenal — le toolkit</span></div>
+    <p style="margin-bottom:22px;" data-i18n="pr.ars.lead">La structure, une fois pour toutes. Un paiement, pas un abonnement. Les cinq instruments de la méthode, prêts à tourner sur ta marque.</p>
+
+    <div class="price-duo">
+      <div class="price-card mini tilt">
+        <span class="badge" data-i18n="pr.ars.t1.badge">Toolkit</span>
+        <div class="amount">147€</div>
+        <ul class="features">
+          <li data-i18n="pr.ars.t1.f1">Les 5 modules complets</li>
+          <li data-i18n="pr.ars.t1.f2">Frameworks vides + cas anonymisés</li>
+          <li data-i18n="pr.ars.t1.f3">Questions exactes d'onboarding</li>
+          <li data-i18n="pr.ars.t1.f4">Format Notion + PDF</li>
+        </ul>
+        <a href="#" class="btn btn-primary" data-i18n="pr.ars.buy"><span class="fill"></span>Obtenir l'Arsenal</a>
+      </div>
+      <div class="price-card mini featured tilt">
+        <span class="badge" data-i18n="pr.ars.t2.badge">Toolkit + diagnostic</span>
+        <div class="amount">197€</div>
+        <ul class="features">
+          <li data-i18n="pr.ars.t2.f1">Tout le contenu du toolkit seul</li>
+          <li data-i18n="pr.ars.t2.f2">Module 5 enrichi d'une checklist d'auto-évaluation</li>
+          <li data-i18n="pr.ars.t2.f3">Accès aux mises à jour du toolkit</li>
+          <li data-i18n="pr.ars.t2.f4">Format Notion + PDF + Figma (option visuelle)</li>
+        </ul>
+        <a href="#" class="btn btn-primary" data-i18n="pr.ars.buy"><span class="fill"></span>Obtenir l'Arsenal</a>
+      </div>
+    </div>
+    <p class="price-note" data-i18n="pr.ars.note">Le module 5 reste volontairement incomplet sur l'extraction de la singularité — la seule part que ni le toolkit ni personne d'autre que l'œil ne peut automatiser.</p>
+  </div>
+
   <div class="sec reveal">
-    <div class="sec-head"><span class="sec-num" data-i18n="pr.s2.num">02</span><span class="sec-title" data-i18n="pr.s2.title">Ce que vous recevez</span></div>
+    <div class="sec-head"><span class="sec-num" data-i18n="pr.str.num">03</span><span class="sec-title" data-i18n="pr.str.title">Strawberry — la commission</span></div>
+    <p style="margin-bottom:20px;" data-i18n="pr.str.lead">Le haut de l'échelle : ta marque, faite en entier. La structure ET l'œil, appliqués en privé.</p>
+    <div class="str-card">
+      <div class="amount" data-i18n="pr.str.amount">~4500€</div>
+      <ul class="features">
+        <li data-i18n="pr.str.f1">Exécution complète par Strawberry Production</li>
+        <li data-i18n="pr.str.f2">L'œil et l'expérience qu'aucun toolkit ne transmet</li>
+        <li data-i18n="pr.str.f3">Commissions limitées par trimestre</li>
+      </ul>
+      <a href="https://gostrawberryprod.com" class="btn-bridge" data-i18n="pr.str.cta">Travailler avec Strawberry →</a>
+    </div>
+  </div>
+
+  <div class="sec reveal">
+    <div class="sec-head"><span class="sec-num" data-i18n="pr.s2.num">04</span><span class="sec-title" data-i18n="pr.s2.title">Ce que vous recevez</span></div>
     <ul class="checks">
       <li><span class="mk">→</span><p data-i18n="pr.r1">Une nouvelle fiche chaque semaine, livrée par email et disponible dans la bibliothèque en ligne.</p></li>
       <li><span class="mk">→</span><p data-i18n="pr.r2">L'accès rétroactif à toutes les fiches déjà publiées, dès le premier jour d'abonnement.</p></li>
@@ -68,8 +172,12 @@
   </div>
 
   <div class="sec reveal">
-    <div class="sec-head"><span class="sec-num" data-i18n="pr.s3.num">03</span><span class="sec-title" data-i18n="pr.s3.title">Questions fréquentes</span></div>
+    <div class="sec-head"><span class="sec-num" data-i18n="pr.s3.num">05</span><span class="sec-title" data-i18n="pr.s3.title">Questions fréquentes</span></div>
 
+    <div class="faq-item">
+      <div class="faq-q" data-i18n="pr.q5">Quelle différence entre l'abonnement VITRINE et l'Arsenal ?</div>
+      <p class="faq-a" data-i18n="pr.a5">VITRINE, c'est le regard : une marque disséquée chaque semaine, pour installer la grille dans ton œil. L'Arsenal, c'est la structure : les instruments pour faire tourner cette grille sur ta propre marque, quand tu veux. L'abonnement forme le réflexe ; le toolkit donne l'outil. Beaucoup prennent les deux.</p>
+    </div>
     <div class="faq-item">
       <div class="faq-q" data-i18n="pr.q1">Les marques analysées sont-elles mes clients ?</div>
       <p class="faq-a" data-i18n="pr.a1">Non. VITRINE analyse exclusivement des marques publiques, jamais des clients de Strawberry Production. C'est une écoute du marché, pas un audit commandé.</p>
@@ -87,6 +195,8 @@
       <p class="faq-a" data-i18n="pr.a4">L'objectif est une fiche par semaine, avec une tolérance annoncée à l'avance en cas de cadence ajustée à deux semaines.</p>
     </div>
   </div>
+
+  <p class="disclaimer" data-i18n="disclaimer">Analyses indépendantes. VITRINE n'est lié à aucune des marques citées, qui n'ont pas commandé ces lectures.</p>
 
   <footer class="sitefoot">
     <span data-i18n="footer.brand">Strawberry Production</span>

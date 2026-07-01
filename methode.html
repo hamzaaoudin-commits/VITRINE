@@ -3,9 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Méthode — VITRINE</title>
-<meta name="description" content="La grille de lecture utilisée dans chaque fiche VITRINE.">
+<title data-i18n="title.method">Méthode — VITRINE</title>
+<meta name="description" data-i18n-content="meta.method" content="La grille de lecture utilisée dans chaque fiche VITRINE, déroulée sur des cas réels.">
+
+<link rel="canonical" href="https://vitrine.gostrawberryprod.com/methode">
+<link rel="alternate" hreflang="fr" href="https://vitrine.gostrawberryprod.com/methode?lang=fr">
+<link rel="alternate" hreflang="en" href="https://vitrine.gostrawberryprod.com/methode?lang=en">
+<link rel="alternate" hreflang="x-default" href="https://vitrine.gostrawberryprod.com/methode">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#ece8df">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="VITRINE">
+<meta property="og:title" content="Méthode — VITRINE">
+<meta property="og:description" content="La grille de lecture de chaque fiche VITRINE, déroulée en entier sur des cas réels — plus les cinq instruments de l'Arsenal.">
+<meta property="og:url" content="https://vitrine.gostrawberryprod.com/methode">
+<meta property="og:image" content="https://vitrine.gostrawberryprod.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Méthode — VITRINE">
+<meta name="twitter:description" content="La grille, déroulée en entier sur des cas réels — plus les cinq instruments de l'Arsenal.">
+<meta name="twitter:image" content="https://vitrine.gostrawberryprod.com/og-image.png">
+
 <link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "La méthode S.T.R.A.W., appliquée chaque semaine",
+  "author": { "@type": "Organization", "name": "Strawberry Production", "url": "https://gostrawberryprod.com" },
+  "publisher": { "@type": "Organization", "name": "Strawberry Production", "brand": "VITRINE" },
+  "inLanguage": "fr",
+  "about": "Grille de lecture de positionnement de marque"
+}
+</script>
 </head>
 <body>
 <div class="grid-backdrop"></div>
@@ -13,18 +52,23 @@
 <nav class="topnav">
   <div class="topnav-inner">
     <a href="index.html" class="brand-mark">VITRINE<span>.</span></a>
-    <div class="nav-links">
-      <a href="index.html" data-i18n="nav.home">Accueil</a>
-      <a href="bibliotheque.html" data-i18n="nav.library">Bibliothèque</a>
-      <a href="methode.html" class="active" data-i18n="nav.method">Méthode</a>
-      <a href="abonnement.html" data-i18n="nav.pricing">Abonnement</a>
-    </div>
-    <div style="display:flex; align-items:center; gap:14px;">
-      <div class="lang-toggle">
-        <button data-lang="fr">FR</button>
-        <button data-lang="en">EN</button>
+    <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-collapse" data-i18n-aria="a11y.menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-collapse" id="nav-collapse">
+      <div class="nav-links">
+        <a href="index.html" data-i18n="nav.home">Accueil</a>
+        <a href="bibliotheque.html" data-i18n="nav.library">Bibliothèque</a>
+        <a href="methode.html" class="active" data-i18n="nav.method">Méthode</a>
+        <a href="abonnement.html" data-i18n="nav.pricing">Abonnement</a>
       </div>
-      <a href="abonnement.html" class="nav-cta" data-i18n="nav.cta"><span class="fill"></span>S'abonner</a>
+      <div class="nav-right">
+        <div class="lang-toggle">
+          <button data-lang="fr" aria-label="Français" data-i18n-aria="a11y.fr" aria-pressed="true">FR</button>
+          <button data-lang="en" aria-label="English" data-i18n-aria="a11y.en" aria-pressed="false">EN</button>
+        </div>
+        <a href="abonnement.html" class="nav-cta" data-i18n="nav.cta"><span class="fill"></span>S'abonner</a>
+      </div>
     </div>
   </div>
 </nav>
@@ -37,7 +81,7 @@
       <span data-i18n="meth.kicker2">La grille de lecture</span>
     </div>
     <h1 data-i18n="meth.h1">La même grille,<br>appliquée chaque<br>semaine.</h1>
-    <p class="baseline" data-i18n="meth.baseline">VITRINE n'enseigne rien frontalement. La méthode se transmet par répétition : la même structure, appliquée à des marques différentes, semaine après semaine.</p>
+    <p class="baseline" data-i18n="meth.baseline">VITRINE n'enseigne rien frontalement. La grille s'installe par répétition : la même structure, sur des marques différentes, semaine après semaine — jusqu'à ce que tu ne puisses plus regarder une marque sans elle.</p>
   </div>
 
   <div class="sec reveal">
@@ -58,7 +102,7 @@
       </div>
       <div>
         <span class="label" data-i18n="meth.l2">Pas un cours</span>
-        <p data-i18n="meth.p2">Aucune fiche n'explique la méthode en théorie. Elle l'applique, point. C'est en la voyant tourner sur des dizaines de cas que la grille de lecture s'installe chez le lecteur.</p>
+        <p data-i18n="meth.p2">Aucune fiche n'explique la méthode en théorie — et c'est voulu. Un cours se termine ; VITRINE, non. Tu ne « finis » pas la grille : tu la gardes allumée. C'est ce qui la rend indélogeable une fois installée.</p>
       </div>
     </div>
   </div>
@@ -69,8 +113,68 @@
   </div>
 
   <div class="sec reveal">
-    <a href="bibliotheque.html" class="btn btn-primary" data-i18n="meth.cta"><span class="fill"></span>Voir la méthode en action</a>
+    <div class="sec-head"><span class="sec-num" data-i18n="meth.s4.num">04</span><span class="sec-title" data-i18n="meth.s4.title">Deux cas, déroulés en entier</span></div>
+    <p style="margin-bottom:4px;" data-i18n="meth.s4.p">Pas des extraits. La grille appliquée jusqu'à la décision.</p>
+
+    <div class="case tilt">
+      <div class="case-head">
+        <div class="case-brand" data-i18n="cs.a.brand">Typology</div>
+        <span class="case-sector" data-i18n="cs.a.sector">Beauté / DNVB</span>
+      </div>
+      <div class="case-body">
+        <div class="case-field"><h4 data-i18n="cs.works">Ce qui marche</h4><p data-i18n="cs.a.works.p">La transparence est le produit autant que la crème : formules courtes, INCI assumés, sourcing nommé, design blanc de laboratoire.</p></div>
+        <div class="case-field"><h4 data-i18n="cs.blurry">Ce qui est flou</h4><p data-i18n="cs.a.blurry.p">Le corps de marque hésite entre deux mondes : le ton laboratoire promet la preuve, l'esthétique promet le lifestyle. Les deux publics ne veulent pas la même chose.</p></div>
+        <div class="case-field"><h4 data-i18n="cs.reposition">Repositionnement</h4><p data-i18n="cs.a.reposition.p">Choisir la preuve. Faire de l'efficacité démontrée le centre de gravité, et laisser l'esthétique servir cette promesse au lieu de la concurrencer.</p></div>
+      </div>
+      <div class="case-verdict" data-i18n="cs.a.verdict">Verdict — une marque de clarté qui n'a pas encore tranché ce qu'elle veut prouver.</div>
+    </div>
+
+    <div class="case tilt">
+      <div class="case-head">
+        <div class="case-brand" data-i18n="cs.b.brand">Qonto</div>
+        <span class="case-sector" data-i18n="cs.b.sector">Fintech / SaaS B2B</span>
+      </div>
+      <div class="case-body">
+        <div class="case-field"><h4 data-i18n="cs.works">Ce qui marche</h4><p data-i18n="cs.b.works.p">La promesse d'origine est imbattable de netteté : la gestion bancaire des pros, sans la banque. Un « gain de temps » ressenti dès l'onboarding.</p></div>
+        <div class="case-field"><h4 data-i18n="cs.blurry">Ce qui est flou</h4><p data-i18n="cs.b.blurry.p">En grandissant, le discours s'alourdit. Chaque brique est légitime, mais empilées elles noient la promesse simple sous une liste de fonctionnalités.</p></div>
+        <div class="case-field"><h4 data-i18n="cs.reposition">Repositionnement</h4><p data-i18n="cs.b.reposition.p">Réancrer sur le temps, pas sur les fonctions. Présenter chaque feature comme une heure regagnée — la largeur de l'offre devient une preuve de la promesse.</p></div>
+      </div>
+      <div class="case-verdict" data-i18n="cs.b.verdict">Verdict — une promesse limpide, menacée par son propre succès fonctionnel.</div>
+    </div>
   </div>
+
+  <div class="sec reveal">
+    <div class="sec-head"><span class="sec-num" data-i18n="meth.s5.num">05</span><span class="sec-title" data-i18n="meth.s5.title">L'Arsenal — les instruments</span></div>
+    <p class="wide" style="margin-bottom:24px;" data-i18n="meth.s5.lead">VITRINE entraîne l'œil par répétition. L'Arsenal, lui, te met la structure entre les mains : les cinq instruments exacts que j'utilise en commission, pour faire tourner la grille sur ta propre marque. L'un sans l'autre est incomplet — l'œil sans structure hésite, la structure sans œil s'applique à l'aveugle.</p>
+
+    <div class="mod-list">
+      <div class="mod"><span class="mod-i">01</span><div><h4 data-i18n="ars.m1.t">Differentiation Diagnostic</h4><p data-i18n="ars.m1.d">Isoler ce qui distingue réellement la marque.</p></div></div>
+      <div class="mod"><span class="mod-i">02</span><div><h4 data-i18n="ars.m2.t">Narrative Platform</h4><p data-i18n="ars.m2.d">Construire le récit de marque.</p></div></div>
+      <div class="mod"><span class="mod-i">03</span><div><h4 data-i18n="ars.m3.t">Language System</h4><p data-i18n="ars.m3.d">Ton, lexique, règles d'écriture.</p></div></div>
+      <div class="mod"><span class="mod-i">04</span><div><h4 data-i18n="ars.m4.t">Deployment Kit</h4><p data-i18n="ars.m4.d">Déploiement sur les supports.</p></div></div>
+      <div class="mod locked"><span class="mod-i">05</span><div><h4 data-i18n="ars.m5.t">Coherence Guide</h4><p data-i18n="ars.m5.d">Cohérence globale — le verrou stratégique, volontairement incomplet sur l'extraction de la singularité (la part non-automatisable de la méthode).</p></div></div>
+    </div>
+
+    <div class="deal-box">
+      <span class="label" data-i18n="ars.deal.l">Ce que ça transmet</span>
+      <p data-i18n="ars.deal.p">La structure exacte suivie en commission : frameworks, cas anonymisés, questions d'onboarding. Pas l'œil — ça, c'est VITRINE qui l'installe, semaine après semaine.</p>
+    </div>
+
+    <p style="margin-top:26px;"><a href="abonnement.html#arsenal" class="btn btn-primary" data-i18n="meth.s5.cta"><span class="fill"></span>Obtenir l'Arsenal →</a></p>
+  </div>
+
+  <div class="sec reveal">
+    <a href="bibliotheque.html" class="btn btn-primary" data-i18n="meth.cta"><span class="fill"></span>Voir la bibliothèque</a>
+  </div>
+
+  <div class="bridge reveal">
+    <span class="b-kicker" data-i18n="bridge.kicker">En privé</span>
+    <h3 data-i18n="bridge.title">Cette lecture, sur ta marque.</h3>
+    <p data-i18n="bridge.p">VITRINE dissèque des marques publiques. Quand c'est la tienne, ça se passe en commission privée : Strawberry Production applique la même méthode S.T.R.A.W. en profondeur — audit, repositionnement, direction de marque.</p>
+    <a href="https://gostrawberryprod.com" class="btn-bridge" data-i18n="bridge.cta">Travailler avec Strawberry →</a>
+  </div>
+
+  <p class="disclaimer" data-i18n="disclaimer">Analyses indépendantes. VITRINE n'est lié à aucune des marques citées, qui n'ont pas commandé ces lectures.</p>
 
   <footer class="sitefoot">
     <span data-i18n="footer.brand">Strawberry Production</span>
