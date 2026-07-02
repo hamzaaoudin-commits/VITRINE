@@ -104,23 +104,53 @@
       <span data-i18n="idx.kicker1">Une publication de Strawberry Production</span>
       <span data-i18n="idx.kicker2">Paris — édition quotidienne</span>
     </div>
-    <h1 data-i18n="idx.h1">Ce que je vois<br>quand je regarde<br>une marque.</h1>
-    <p class="baseline" data-i18n="idx.baseline">Chaque jour, une marque réelle disséquée en public — ce qui marche, ce qui est flou, comment je la repositionnerais. Ce n'est pas un cours : c'est un radar. La lecture du marché que tes concurrents n'ont pas, jour après jour.</p>
+    <h1 data-i18n="idx.h1">Capte le signal<br>d'une marque<br>avant le marché.</h1>
+    <p class="baseline" data-i18n="idx.baseline">Chaque jour, une marque réelle passe au radar : ce qui émet (le signal), ce qui parasite (le bruit), et le cap que je lui donnerais. Pas un cours — un instrument. L'avance que tes concurrents n'ont pas, jour après jour.</p>
     <div class="cta-row">
       <a href="abonnement.html" class="btn btn-primary" data-i18n="idx.cta1"><span class="fill"></span>S'abonner — 15€/mois</a>
       <a href="#fiche" class="btn btn-ghost" data-i18n="idx.cta2"><span class="fill"></span>Voir la fiche du jour</a>
     </div>
 
     <div class="hero-stage">
-      <div class="orbit-ring"></div>
-      <div class="cube3d">
-        <div class="face f-front"><span><span data-i18n="idx.cube.f1.tag">Secteur</span><strong data-i18n="idx.cube.f1">DNVB</strong></span></div>
-        <div class="face f-back"><span><span data-i18n="idx.cube.f2.tag">Secteur</span><strong data-i18n="idx.cube.f2">SaaS B2B</strong></span></div>
-        <div class="face f-right"><span><span data-i18n="idx.cube.f3.tag">Secteur</span><strong data-i18n="idx.cube.f3">Luxe</strong></span></div>
-        <div class="face f-left"><span><span data-i18n="idx.cube.f4.tag">Secteur</span><strong data-i18n="idx.cube.f4">Food</strong></span></div>
-        <div class="face f-top"><span><span data-i18n="idx.cube.f5.tag">Secteur</span><strong data-i18n="idx.cube.f5">Hospitalité</strong></span></div>
-        <div class="face f-bottom"><span><span data-i18n="idx.cube.f6.tag">Fiche</span><strong data-i18n="idx.cube.f6">N°014</strong></span></div>
+      <div class="radar-scope" aria-hidden="true">
+        <div class="scope-ring r1"></div>
+        <div class="scope-ring r2"></div>
+        <div class="scope-ring r3"></div>
+        <div class="scope-cross"></div>
+        <div class="scope-sweep"></div>
+        <div class="scope-center"></div>
+        <div class="blip" style="--a:38deg;--d:120px;--phase:.58s"><span class="dot"></span><span class="ping"></span><span class="blip-label">Sézane</span></div>
+        <div class="blip" style="--a:118deg;--d:92px;--phase:1.8s"><span class="dot"></span><span class="ping"></span><span class="blip-label">Qonto</span></div>
+        <div class="blip left" style="--a:212deg;--d:128px;--phase:3.24s"><span class="dot"></span><span class="ping"></span><span class="blip-label">Typology</span></div>
+        <div class="blip left" style="--a:300deg;--d:76px;--phase:4.58s"><span class="dot"></span><span class="ping"></span><span class="blip-label">Diptyque</span></div>
       </div>
+    </div>
+  </div>
+
+  <div class="sec reveal">
+    <div class="flux-head">
+      <span class="readout" data-i18n="idx.flux.title">Dernières détections</span>
+      <span class="readout" data-i18n="idx.flux.meta">Portée : 14 marques au radar</span>
+    </div>
+    <div class="detline">
+      <span class="d-mk"></span>
+      <div><span class="d-name">Sézane</span><span class="d-sig" data-i18n="idx.det1.sig">Signal fort, cap flou sur la cadence de sorties.</span></div>
+      <span class="d-sector" data-i18n="idx.det1.sector">Mode</span>
+    </div>
+    <div class="detline">
+      <span class="d-mk"></span>
+      <div><span class="d-name">Qonto</span><span class="d-sig" data-i18n="idx.det2.sig">Promesse nette, brouillée par l'empilement de features.</span></div>
+      <span class="d-sector" data-i18n="idx.det2.sector">SaaS</span>
+    </div>
+    <div class="detline">
+      <span class="d-mk"></span>
+      <div><span class="d-name">Typology</span><span class="d-sig" data-i18n="idx.det3.sig">Preuve contre lifestyle : tension jamais tranchée.</span></div>
+      <span class="d-sector" data-i18n="idx.det3.sector">Beauté</span>
+    </div>
+    <div class="detline">
+      <span class="d-mk"></span>
+      <div><span class="d-name">Diptyque</span><span class="d-sig" data-i18n="idx.det4.sig">Récit de maison fort, ton digital parfois trop startup.</span></div>
+      <span class="d-sector" data-i18n="idx.det4.sector">Luxe</span>
     </div>
   </div>
 
@@ -128,8 +158,8 @@
     <div class="sec-head"><span class="sec-num" data-i18n="idx.s1.num">01</span><span class="sec-title" data-i18n="idx.s1.title">Le principe</span></div>
     <div class="duo">
       <div>
-        <span class="label" data-i18n="idx.s1.l1">Ce n'est pas un blog</span>
-        <p data-i18n="idx.s1.p1">RADAR n'enseigne rien frontalement. C'est une écoute du marché en direct : chaque fiche analyse une marque publique, pas un client, avec la même grille que celle utilisée pour les case studies Strawberry.</p>
+        <span class="label" data-i18n="idx.s1.l1">Ce que ça capte</span>
+        <p data-i18n="idx.s1.p1">RADAR capte le positionnement d'une marque publique en direct : le signal utile, isolé du bruit. Chaque fiche vise une marque réelle — jamais un client — avec la grille des missions Strawberry.</p>
       </div>
       <div>
         <span class="label" data-i18n="idx.s1.l2">Ce que ça installe</span>
@@ -140,6 +170,10 @@
 
   <div class="sec reveal" id="fiche">
     <div class="sec-head"><span class="sec-num" data-i18n="idx.s2.num">02</span><span class="sec-title" data-i18n="idx.s2.title">La fiche du jour</span></div>
+    <div class="live-row">
+      <span class="live-badge"><span class="live-dot"></span><span data-i18n="idx.live.badge">En direct</span></span>
+      <span class="live-stamp" id="live-stamp">Dernière détection : aujourd'hui</span>
+    </div>
     <p style="margin-bottom:26px;" data-i18n="idx.s2.p">Format fixe, lecture courte. La structure ne change jamais — seule la marque change. Celle-ci est en accès libre.</p>
 
     <div class="fiche tilt">
@@ -182,19 +216,19 @@
     <div class="ladder">
       <div class="rung is-current">
         <span class="r-badge" data-i18n="idx.ladder.cur">actuel</span>
-        <span class="r-k" data-i18n="idx.ladder1.k">01 · Le regard</span>
+        <span class="r-k" data-i18n="idx.ladder1.k">01 · Détecter</span>
         <div class="r-t" data-i18n="idx.ladder1.t">RADAR — l'abonnement</div>
         <p class="r-p" data-i18n="idx.ladder1.p">Une marque disséquée chaque jour. Le radar qui s'installe et ne s'éteint plus.</p>
         <span class="r-price" data-i18n="idx.ladder1.price">15€ / mois</span>
       </div>
       <div class="rung">
-        <span class="r-k" data-i18n="idx.ladder2.k">02 · Les instruments</span>
+        <span class="r-k" data-i18n="idx.ladder2.k">02 · Armer</span>
         <div class="r-t" data-i18n="idx.ladder2.t">L'Arsenal — le toolkit</div>
         <p class="r-p" data-i18n="idx.ladder2.p">Les cinq instruments exacts de la méthode, pour faire tourner la grille sur ta propre marque.</p>
         <span class="r-price" data-i18n="idx.ladder2.price">147€ one-shot</span>
       </div>
       <div class="rung">
-        <span class="r-k" data-i18n="idx.ladder3.k">03 · L'exécution</span>
+        <span class="r-k" data-i18n="idx.ladder3.k">03 · Exécuter</span>
         <div class="r-t" data-i18n="idx.ladder3.t">Strawberry — la commission</div>
         <p class="r-p" data-i18n="idx.ladder3.p">Quand c'est ta marque, faite en entier, par l'œil qui a construit la méthode.</p>
         <span class="r-price" data-i18n="idx.ladder3.price">sur commande</span>

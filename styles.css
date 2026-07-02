@@ -7,6 +7,8 @@
   --rule:#c9c2b2;
   --red:#a8341f;
   --card:#f6f3ec;
+  --signal:#1c8f6b;        /* accent froid — états "live/signal" */
+  --signal-glow:#39d99e;   /* variante lumineuse — balayage & pings */
 }
 
 *{box-sizing:border-box; margin:0; padding:0;}
@@ -538,71 +540,116 @@ footer.sitefoot{
   box-shadow:0 22px 38px -18px rgba(28,26,22,.35);
 }
 
-/* ===== 3D HERO STAGE ===== */
+/* ===== RADAR SCOPE (hero) ===== */
 .hero-stage{
   position:relative;
-  height:280px;
+  height:300px;
   margin-top:46px;
-  perspective:1100px;
   display:flex;
   align-items:center;
   justify-content:center;
 }
-.cube3d{
+.radar-scope{
   position:relative;
-  width:170px;
-  height:170px;
-  transform-style:preserve-3d;
-  animation:spin3d 16s linear infinite;
+  width:280px;
+  height:280px;
+  border-radius:50%;
 }
-.hero-stage:hover .cube3d{ animation-play-state:paused; }
-.cube3d .face{
+.scope-ring{
+  position:absolute;
+  top:50%; left:50%;
+  transform:translate(-50%,-50%);
+  border:1px solid var(--rule);
+  border-radius:50%;
+}
+.scope-ring.r1{ width:280px; height:280px; }
+.scope-ring.r2{ width:188px; height:188px; }
+.scope-ring.r3{ width:96px;  height:96px; }
+.scope-cross::before,
+.scope-cross::after{
+  content:"";
+  position:absolute;
+  top:50%; left:50%;
+  background:var(--rule);
+}
+.scope-cross::before{ width:280px; height:1px; transform:translate(-50%,-50%); }
+.scope-cross::after{ width:1px; height:280px; transform:translate(-50%,-50%); }
+.scope-center{
+  position:absolute;
+  top:50%; left:50%;
+  width:7px; height:7px;
+  background:var(--ink);
+  border-radius:50%;
+  transform:translate(-50%,-50%);
+  z-index:3;
+}
+/* faisceau tournant */
+.scope-sweep{
   position:absolute;
   inset:0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  background:var(--card);
-  border:1.5px solid var(--ink);
-  font-family:'JetBrains Mono', monospace;
-  font-size:11px;
-  text-transform:uppercase;
-  letter-spacing:.06em;
-  color:var(--ink-soft);
-  padding:14px;
-}
-.cube3d .face > span{ display:block; }
-.cube3d .face strong{
-  display:block;
-  font-family:'Fraunces', serif;
-  font-style:italic;
-  font-weight:500;
-  font-size:16px;
-  text-transform:none;
-  letter-spacing:0;
-  color:var(--ink);
-  margin-top:4px;
-}
-.cube3d .f-front{ transform:translateZ(85px); }
-.cube3d .f-back{ transform:rotateY(180deg) translateZ(85px); }
-.cube3d .f-right{ transform:rotateY(90deg) translateZ(85px); border-color:var(--red); }
-.cube3d .f-left{ transform:rotateY(-90deg) translateZ(85px); border-color:var(--red); }
-.cube3d .f-top{ transform:rotateX(90deg) translateZ(85px); }
-.cube3d .f-bottom{ transform:rotateX(-90deg) translateZ(85px); }
-
-@keyframes spin3d{
-  from{ transform:rotateX(-18deg) rotateY(0deg); }
-  to{ transform:rotateX(-18deg) rotateY(360deg); }
-}
-
-.hero-stage .orbit-ring{
-  position:absolute;
-  width:240px;
-  height:240px;
-  border:1px dashed var(--rule);
   border-radius:50%;
-  transform:rotateX(72deg);
+  background:conic-gradient(from 0deg,
+    rgba(57,217,158,0) 0deg,
+    rgba(57,217,158,0) 300deg,
+    rgba(57,217,158,.10) 340deg,
+    rgba(57,217,158,.30) 356deg,
+    rgba(57,217,158,.55) 360deg);
+  animation:radar-sweep 5.5s linear infinite;
+  z-index:2;
+}
+.scope-sweep::after{ /* ligne franche en tête de faisceau */
+  content:"";
+  position:absolute;
+  top:0; left:50%;
+  width:1px; height:50%;
+  background:linear-gradient(var(--signal), rgba(57,217,158,0));
+  transform-origin:bottom center;
+}
+@keyframes radar-sweep{ from{ transform:rotate(0deg); } to{ transform:rotate(360deg); } }
+
+/* blips = détections réelles, placées par angle (--a) et distance (--d) */
+.blip{
+  position:absolute;
+  top:50%; left:50%;
+  width:9px; height:9px;
+  transform:rotate(var(--a)) translateY(calc(-1 * var(--d))) rotate(calc(-1 * var(--a)));
+  z-index:3;
+}
+.blip .dot{
+  position:absolute;
+  inset:0;
+  background:var(--red);
+  border-radius:50%;
+}
+.blip .ping{
+  position:absolute;
+  top:50%; left:50%;
+  width:9px; height:9px;
+  border-radius:50%;
+  border:1.5px solid var(--signal-glow);
+  transform:translate(-50%,-50%) scale(1);
+  opacity:0;
+  animation:blip-ping 5.5s linear infinite;
+  animation-delay:var(--phase, 0s);
+}
+.blip .blip-label{
+  position:absolute;
+  left:14px; top:50%;
+  transform:translateY(-50%);
+  font-family:'JetBrains Mono', monospace;
+  font-size:10px;
+  letter-spacing:.03em;
+  white-space:nowrap;
+  color:var(--ink-soft);
+  background:var(--paper);
+  padding:1px 4px;
+}
+.blip.left .blip-label{ left:auto; right:14px; }
+@keyframes blip-ping{
+  0%   { opacity:0;   transform:translate(-50%,-50%) scale(1); }
+  4%   { opacity:.9;  transform:translate(-50%,-50%) scale(1); }
+  22%  { opacity:0;   transform:translate(-50%,-50%) scale(3.4); }
+  100% { opacity:0;   transform:translate(-50%,-50%) scale(3.4); }
 }
 
 /* ===== AMBIENT GRID BACKDROP ===== */
@@ -1044,10 +1091,194 @@ footer.sitefoot{
     transition-duration:0.001ms !important;
     scroll-behavior:auto !important;
   }
-  .cube3d{ animation:none !important; transform:rotateX(-14deg) rotateY(28deg); }
-  .orbit-ring{ display:none; }
+  .scope-sweep{ animation:none !important; background:conic-gradient(from 300deg, rgba(57,217,158,0) 0deg, rgba(57,217,158,.28) 55deg, rgba(57,217,158,0) 60deg) !important; }
+  .blip .ping{ animation:none !important; opacity:0 !important; }
+  .live-badge .live-dot{ animation:none !important; }
+  .signal-rail button.active::before{ animation:none !important; }
+  .tilt:hover::after{ animation:none !important; opacity:0 !important; }
   .reveal > *{ opacity:1 !important; transform:none !important; }
   .tilt{ transform:none !important; }
   .btn span.fill{ display:none; }
   .signal-rail button.active{ letter-spacing:.03em; }
 }
+
+/* =========================================================
+   RADAR — couche live, télémétrie, flux, spine, scan-hover
+   ========================================================= */
+
+/* ---- Badge EN DIRECT + timestamp ---- */
+.live-row{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:14px;
+  flex-wrap:wrap;
+}
+.live-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  font-family:'JetBrains Mono', monospace;
+  font-size:10.5px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--signal);
+  border:1px solid var(--signal);
+  padding:4px 9px;
+}
+.live-badge .live-dot{
+  width:7px; height:7px;
+  border-radius:50%;
+  background:var(--signal-glow);
+  box-shadow:0 0 0 0 rgba(57,217,158,.6);
+  animation:live-pulse 2s ease-out infinite;
+}
+@keyframes live-pulse{
+  0%{ box-shadow:0 0 0 0 rgba(57,217,158,.55); }
+  70%{ box-shadow:0 0 0 7px rgba(57,217,158,0); }
+  100%{ box-shadow:0 0 0 0 rgba(57,217,158,0); }
+}
+.live-stamp{
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px;
+  letter-spacing:.03em;
+  color:var(--ink-soft);
+}
+
+/* ---- Readout télémétrie (mono, discret) ---- */
+.readout{
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--signal);
+}
+
+/* ---- Flux de détections (accueil) ---- */
+.flux-head{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:16px;
+  flex-wrap:wrap;
+  margin-bottom:6px;
+}
+.detline{
+  display:grid;
+  grid-template-columns:16px 1fr auto;
+  gap:16px;
+  align-items:baseline;
+  padding:15px 0;
+  border-bottom:1px solid var(--rule);
+}
+.detline:first-child{ border-top:1px solid var(--rule); }
+.detline .d-mk{
+  width:8px; height:8px;
+  border-radius:50%;
+  background:var(--red);
+  position:relative;
+  top:4px;
+}
+.detline .d-name{
+  font-family:'Fraunces', serif;
+  font-weight:600;
+  font-size:19px;
+}
+.detline .d-sig{
+  display:block;
+  font-family:'Newsreader', serif;
+  font-style:italic;
+  font-size:15px;
+  color:var(--ink-soft);
+  margin-top:2px;
+}
+.detline .d-sector{
+  font-family:'JetBrains Mono', monospace;
+  font-size:10.5px;
+  letter-spacing:.04em;
+  color:var(--ink-soft);
+  border:1px solid var(--rule);
+  padding:3px 8px;
+  white-space:nowrap;
+}
+
+/* ---- Kicker signal/bruit/cap (méthode) ---- */
+.tl .sn-k{
+  display:block;
+  font-family:'JetBrains Mono', monospace;
+  font-size:10px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--signal);
+  margin-bottom:5px;
+}
+
+/* ---- Hover "ligne de scan" (remplace le tilt 3D) ---- */
+.tilt{
+  position:relative;
+  overflow:hidden;
+  transition:box-shadow .25s ease;
+}
+.tilt::after{
+  content:"";
+  position:absolute;
+  left:0; right:0;
+  top:-2px;
+  height:2px;
+  background:linear-gradient(90deg, transparent, var(--signal-glow), transparent);
+  opacity:0;
+  transform:translateY(0);
+  pointer-events:none;
+}
+.tilt:hover{ box-shadow:0 18px 34px -20px rgba(28,26,22,.32); }
+.tilt:hover::after{
+  animation:scan-line 1.15s ease-in-out;
+}
+@keyframes scan-line{
+  0%{ opacity:0; top:-2px; }
+  12%{ opacity:.9; }
+  88%{ opacity:.9; }
+  100%{ opacity:0; top:100%; }
+}
+
+/* ---- Colonne vertébrale : file conjonctif entre sections ---- */
+.sec{ position:relative; }
+.sec::before{
+  content:"";
+  position:absolute;
+  left:6px;
+  top:-74px;
+  height:74px;
+  width:1px;
+  background:linear-gradient(var(--rule), rgba(201,194,178,.15));
+}
+.sec .sec-num{ position:relative; }
+.sec .sec-head::before{
+  content:"";
+  position:absolute;
+  left:6px;
+  margin-top:-16px;
+  width:5px; height:5px;
+  border-radius:50%;
+  background:var(--red);
+  transform:translateX(-2px);
+}
+@media (max-width:680px){
+  .sec::before, .sec .sec-head::before{ display:none; }
+  .detline{ grid-template-columns:14px 1fr; }
+  .detline .d-sector{ grid-column:2; justify-self:start; margin-top:6px; }
+}
+
+/* ---- "vous êtes ici" : marqueur signal sur le rail actif ---- */
+.signal-rail button.active::before{
+  content:"";
+  position:absolute;
+  left:-11px; top:50%;
+  width:5px; height:5px;
+  border-radius:50%;
+  background:var(--signal-glow);
+  transform:translateY(-50%);
+  box-shadow:0 0 0 0 rgba(57,217,158,.6);
+  animation:live-pulse 2s ease-out infinite;
+}
+.signal-rail button{ position:relative; }

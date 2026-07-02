@@ -57,3 +57,18 @@ correspondante. Les couleurs et polices sont centralisées en haut de `styles.cs
 Les analyses de marques (Sézane, Typology, Qonto, Asphalte, Diptyque, Big Mamma, La Vie,
 Le Slip Français) sont des lectures de positionnement indépendantes et éditoriales, basées
 sur des éléments publics. RADAR n'est affilié à aucune de ces marques.
+
+## Itération — identité radar (dernière passe)
+
+Le hero n'est plus un cube (héritage VITRINE) mais un **scope radar animé** :
+anneaux de portée, faisceau tournant, et **blips = vraies fiches récentes** (Sézane,
+Qonto, Typology, Diptyque) qui pulsent au passage du balayage. Ajouts :
+- **Accent froid « signal »** (`--signal` / `--signal-glow`) réservé aux états live —
+  le rouge reste réservé aux verdicts.
+- **Couche live** : badge « EN DIRECT » + horodatage « dernière détection » recalculé
+  automatiquement (JS, se met à jour chaque jour et selon la langue).
+- **Flux de détections récentes** sur l'accueil (preuve de portée).
+- **Triade Détecter → Armer → Exécuter** sur l'échelle d'offre et les tarifs.
+- **Signal / Bruit / Cap** sur la grille de méthode.
+- **Colonne vertébrale** filante entre sections + **hover « ligne de scan »**
+  (remplace le tilt 3D). Tout respecte `prefers-reduced-motion`.

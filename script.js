@@ -29,8 +29,8 @@
     // INDEX
     "idx.kicker1":      { fr: "Une publication de Strawberry Production", en: "A Strawberry Production publication" },
     "idx.kicker2":      { fr: "Paris — édition quotidienne", en: "Paris — daily edition" },
-    "idx.h1":           { fr: "Ce que je vois<br>quand je regarde<br>une marque.", en: "What I see<br>when I look at<br>a brand." },
-    "idx.baseline":     { fr: "Chaque jour, une marque réelle disséquée en public — ce qui marche, ce qui est flou, comment je la repositionnerais. Ce n'est pas un cours : c'est un radar. La lecture du marché que tes concurrents n'ont pas, jour après jour.", en: "Every day, a real brand dissected in public — what works, what's blurry, how I'd reposition it. This isn't a course: it's radar. The read on the market your competitors don't have, day after day." },
+    "idx.h1":           { fr: "Capte le signal<br>d'une marque<br>avant le marché.", en: "Catch a brand's<br>signal before<br>the market does." },
+    "idx.baseline":     { fr: "Chaque jour, une marque réelle passe au radar : ce qui émet (le signal), ce qui parasite (le bruit), et le cap que je lui donnerais. Pas un cours — un instrument. L'avance que tes concurrents n'ont pas, jour après jour.", en: "Every day, a real brand goes under the radar: what emits (the signal), what interferes (the noise), and the heading I'd give it. Not a course — an instrument. The lead your competitors don't have, day after day." },
     "idx.cta1":         { fr: "S'abonner — 15€/mois", en: "Subscribe — €15/mo" },
     "idx.cta2":         { fr: "Voir la fiche du jour", en: "See today's sheet" },
 
@@ -49,8 +49,8 @@
 
     "idx.s1.num":       { fr: "01", en: "01" },
     "idx.s1.title":     { fr: "Le principe", en: "The principle" },
-    "idx.s1.l1":        { fr: "Ce n'est pas un blog", en: "This isn't a blog" },
-    "idx.s1.p1":        { fr: "RADAR n'enseigne rien frontalement. C'est une écoute du marché en direct : chaque fiche analyse une marque publique, pas un client, avec la même grille que celle utilisée pour les case studies Strawberry.", en: "RADAR doesn't teach anything head-on. It's a live read of the market: each sheet analyzes a public brand, never a client, using the same grid as Strawberry's case studies." },
+    "idx.s1.l1":        { fr: "Ce que ça capte", en: "What it catches" },
+    "idx.s1.p1":        { fr: "RADAR capte le positionnement d'une marque publique en direct : le signal utile, isolé du bruit. Chaque fiche vise une marque réelle — jamais un client — avec la grille des missions Strawberry.", en: "RADAR catches a public brand's positioning live: the useful signal, isolated from the noise. Each sheet targets a real brand — never a client — with the grid from Strawberry engagements." },
     "idx.s1.l2":        { fr: "Ce que ça installe", en: "What it installs" },
     "idx.s1.p2":        { fr: "Un radar qui ne s'éteint plus. À mesure que la bibliothèque s'épaissit, tu lis le positionnement d'une marque en quelques secondes — là où le marché met des mois. Ce n'est pas un savoir qu'on termine ; c'est un angle mort en moins, à vie.", en: "A radar that never switches off. As the library thickens, you read a brand's positioning in seconds — where the market takes months. It's not knowledge you finish; it's one blind spot fewer, for good." },
 
@@ -200,7 +200,7 @@
     "pr.baseline":      { fr: "Un prix fondateur, pour les premiers abonnés — verrouillé tant que l'abonnement reste actif.", en: "A founder price, for the first subscribers — locked in as long as the subscription stays active." },
 
     "pr.s1.num":        { fr: "01", en: "01" },
-    "pr.s1.title":      { fr: "Le tarif", en: "Pricing" },
+    "pr.s1.title":      { fr: "Détecter — l'abonnement", en: "Detect — the subscription" },
     "pr.badge":         { fr: "Prix fondateur — 50 places", en: "Founder price — 50 spots" },
     "pr.label":         { fr: "RADAR", en: "RADAR" },
     "pr.amount.sub":    { fr: "/ mois", en: "/ month" },
@@ -244,15 +244,15 @@
     "idx.s4.num":       { fr: "04", en: "04" },
     "idx.s4.title":     { fr: "L'offre, en trois temps", en: "The offer, in three moves" },
     "idx.s4.p":         { fr: "Un même regard, trois manières d'y entrer — du plus léger au plus engageant. Rien de dilué : une seule méthode, S.T.R.A.W., déclinée selon ce dont tu as besoin.", en: "One eye, three ways in — from the lightest to the most committed. Nothing diluted: a single method, S.T.R.A.W., in the form you need." },
-    "idx.ladder1.k":    { fr: "01 · Le regard", en: "01 · The eye" },
+    "idx.ladder1.k":    { fr: "01 · Détecter", en: "01 · Detect" },
     "idx.ladder1.t":    { fr: "RADAR — l'abonnement", en: "RADAR — the subscription" },
     "idx.ladder1.p":    { fr: "Une marque disséquée chaque jour. Le radar qui s'installe et ne s'éteint plus.", en: "A brand dissected every day. The radar that installs itself and never switches off." },
     "idx.ladder1.price": { fr: "15€ / mois", en: "€15 / mo" },
-    "idx.ladder2.k":    { fr: "02 · Les instruments", en: "02 · The instruments" },
+    "idx.ladder2.k":    { fr: "02 · Armer", en: "02 · Arm" },
     "idx.ladder2.t":    { fr: "L'Arsenal — le toolkit", en: "The Arsenal — the toolkit" },
     "idx.ladder2.p":    { fr: "Les cinq instruments exacts de la méthode, pour faire tourner la grille sur ta propre marque.", en: "The five exact instruments of the method, to run the grid on your own brand." },
     "idx.ladder2.price": { fr: "147€ one-shot", en: "€147 one-time" },
-    "idx.ladder3.k":    { fr: "03 · L'exécution", en: "03 · The execution" },
+    "idx.ladder3.k":    { fr: "03 · Exécuter", en: "03 · Execute" },
     "idx.ladder3.t":    { fr: "Strawberry — la commission", en: "Strawberry — the commission" },
     "idx.ladder3.p":    { fr: "Quand c'est ta marque, faite en entier, par l'œil qui a construit la méthode.", en: "When it's your brand, done in full, by the eye that built the method." },
     "idx.ladder3.price": { fr: "sur commande", en: "on commission" },
@@ -281,7 +281,7 @@
     "pr.baseline2":     { fr: "Trois manières d'entrer, une seule méthode. Du radar quotidien à l'exécution complète — sans jamais diluer.", en: "Three ways in, one method. From the daily radar to full execution — never diluted." },
 
     "pr.ars.num":       { fr: "02", en: "02" },
-    "pr.ars.title":     { fr: "L'Arsenal — le toolkit", en: "The Arsenal — the toolkit" },
+    "pr.ars.title":     { fr: "Armer — l'Arsenal", en: "Arm — the Arsenal" },
     "pr.ars.lead":      { fr: "La structure, une fois pour toutes. Un paiement, pas un abonnement. Les cinq instruments de la méthode, prêts à tourner sur ta marque.", en: "The structure, once and for all. One payment, not a subscription. The five instruments of the method, ready to run on your brand." },
     "pr.ars.t1.badge":  { fr: "Toolkit", en: "Toolkit" },
     "pr.ars.t1.f1":     { fr: "Les 5 modules complets", en: "All 5 full modules" },
@@ -296,7 +296,7 @@
     "pr.ars.buy":       { fr: "Obtenir l'Arsenal", en: "Get the Arsenal" },
 
     "pr.str.num":       { fr: "03", en: "03" },
-    "pr.str.title":     { fr: "Strawberry — la commission", en: "Strawberry — the commission" },
+    "pr.str.title":     { fr: "Exécuter — la commission", en: "Execute — the commission" },
     "pr.str.lead":      { fr: "Le haut de l'échelle : ta marque, faite en entier. La structure ET l'œil, appliqués en privé.", en: "The top of the ladder: your brand, done in full. Structure AND the eye, applied privately." },
     "pr.str.amount":    { fr: "~4500€", en: "~€4,500" },
     "pr.str.f1":        { fr: "Exécution complète par Strawberry Production", en: "Full execution by Strawberry Production" },
@@ -306,6 +306,25 @@
 
     "pr.q5":            { fr: "Quelle différence entre l'abonnement RADAR et l'Arsenal ?", en: "What's the difference between the RADAR subscription and the Arsenal?" },
     "pr.a5":            { fr: "RADAR, c'est le regard : une marque disséquée chaque jour, pour installer la grille dans ton œil. L'Arsenal, c'est la structure : les instruments pour faire tourner cette grille sur ta propre marque, quand tu veux. L'abonnement forme le réflexe ; le toolkit donne l'outil. Beaucoup prennent les deux.", en: "RADAR is the eye: a brand dissected every day, to install the grid in your eye. The Arsenal is the structure: the instruments to run that grid on your own brand, whenever you want. The subscription builds the reflex; the toolkit gives the tool. Many take both." },
+
+    // ===== COUCHE LIVE / FLUX / TÉLÉMÉTRIE =====
+    "idx.live.badge":   { fr: "En direct", en: "Live" },
+    "idx.live.stamp":   { fr: "Dernière détection : aujourd'hui", en: "Last detection: today" },
+    "idx.flux.title":   { fr: "Dernières détections", en: "Latest detections" },
+    "idx.flux.meta":    { fr: "Portée : 14 marques au radar", en: "Range: 14 brands on radar" },
+    "idx.det1.sig":     { fr: "Signal fort, cap flou sur la cadence de sorties.", en: "Strong signal, blurry heading on release cadence." },
+    "idx.det1.sector":  { fr: "Mode", en: "Fashion" },
+    "idx.det2.sig":     { fr: "Promesse nette, brouillée par l'empilement de features.", en: "Sharp promise, jammed by feature-stacking." },
+    "idx.det2.sector":  { fr: "SaaS", en: "SaaS" },
+    "idx.det3.sig":     { fr: "Preuve contre lifestyle : tension jamais tranchée.", en: "Proof vs lifestyle: tension never settled." },
+    "idx.det3.sector":  { fr: "Beauté", en: "Beauty" },
+    "idx.det4.sig":     { fr: "Récit de maison fort, ton digital parfois trop startup.", en: "Strong maison narrative, digital tone sometimes too startup." },
+    "idx.det4.sector":  { fr: "Luxe", en: "Luxury" },
+
+    // Méthode — signal / bruit / cap
+    "meth.t1.k":        { fr: "Le signal", en: "The signal" },
+    "meth.t2.k":        { fr: "Le bruit", en: "The noise" },
+    "meth.t3.k":        { fr: "Le cap", en: "The heading" },
 
     // A11Y
     "a11y.menu":        { fr: "Ouvrir le menu", en: "Open menu" },
@@ -358,6 +377,9 @@
       u.searchParams.set("lang", lang);
       window.history.replaceState({}, "", u);
     } catch (e) { /* no-op */ }
+
+    // horodatage vivant recalculé dans la bonne langue
+    if (typeof initLiveStamp === "function") initLiveStamp();
   }
 
   function initLangToggle() {
@@ -407,20 +429,34 @@
     items.forEach(el => io.observe(el));
   }
 
-  /* ---------- 5. TILT 3D AU SURVOL (cartes) ---------- */
-  function initTilt() {
-    if (REDUCE) return; // respect du mouvement réduit
-    document.querySelectorAll(".tilt").forEach(card => {
-      card.addEventListener("mousemove", (e) => {
-        const r = card.getBoundingClientRect();
-        const x = (e.clientX - r.left) / r.width - 0.5;
-        const y = (e.clientY - r.top) / r.height - 0.5;
-        card.style.transform = `rotateY(${x * 8}deg) rotateX(${-y * 8}deg) translateZ(0)`;
-      });
-      card.addEventListener("mouseleave", () => {
-        card.style.transform = "rotateY(0deg) rotateX(0deg)";
-      });
-    });
+  /* ---------- 5. HOVER CARTES ----------
+     Le survol est désormais géré en CSS (ligne de scan sur .tilt).
+     On ne fait plus de transformation 3D en JS. */
+  function initTilt() { /* no-op : scan-line CSS */ }
+
+  /* ---------- 5b. HORODATAGE VIVANT (dernière détection) ---------- */
+  function initLiveStamp() {
+    const el = document.getElementById("live-stamp");
+    if (!el) return;
+    const lang = document.documentElement.getAttribute("lang") === "en" ? "en" : "fr";
+    // "dernière détection" = aujourd'hui à 08:00 locale
+    const now = new Date();
+    const drop = new Date(now); drop.setHours(8, 0, 0, 0);
+    let base, rel;
+    if (now >= drop) {
+      const h = Math.floor((now - drop) / 3600000);
+      base = drop;
+      rel = h <= 0
+        ? (lang === "en" ? "moments ago" : "à l'instant")
+        : (lang === "en" ? `${h}h ago` : `il y a ${h} h`);
+    } else {
+      const y = new Date(drop); y.setDate(y.getDate() - 1);
+      base = y;
+      rel = lang === "en" ? "yesterday" : "hier";
+    }
+    const prefix = lang === "en" ? "Last detection: " : "Dernière détection : ";
+    el.textContent = prefix + rel;
+    el.setAttribute("data-live-managed", "1");
   }
 
   /* ---------- 6. FIL DE SIGNAL (narration au scroll) ----------
@@ -489,6 +525,7 @@
     initMobileNav();
     initReveal();
     initTilt();
+    initLiveStamp();
     initSignalRail();
   });
 
