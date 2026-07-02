@@ -1,7 +1,7 @@
-# VITRINE — site web
+# RADAR — site web
 
-Site statique multi-pages pour l'offre VITRINE (Strawberry Production).
-VITRINE intègre désormais **l'Arsenal** (ex-GISANT / ARSENAL, le toolkit de la méthode
+Site statique multi-pages pour l'offre RADAR (Strawberry Production).
+RADAR intègre désormais **l'Arsenal** (ex-GISANT / ARSENAL, le toolkit de la méthode
 S.T.R.A.W.) comme second étage de l'offre, et fait le pont vers Strawberry Production
 comme troisième. Une seule marque, une seule méthode, trois manières d'y entrer — sans dilution.
 
@@ -9,7 +9,7 @@ comme troisième. Une seule marque, une seule méthode, trois manières d'y entr
 
 ```
 .
-├── index.html          # Accueil — repositionnement "radar" + échelle d'offre (VITRINE / Arsenal / Strawberry)
+├── index.html          # Accueil — repositionnement "radar" + échelle d'offre (RADAR / Arsenal / Strawberry)
 ├── bibliotheque.html   # Fiche complète nommée (Sézane) + bibliothèque de fiches réelles
 ├── methode.html        # Grille + 2 études de cas déroulées (Typology, Qonto) + les 5 modules de l'Arsenal
 ├── abonnement.html     # L'échelle complète : abonnement 15€ / Arsenal 147–197€ / Strawberry ~4500€ + FAQ
@@ -17,7 +17,7 @@ comme troisième. Une seule marque, une seule méthode, trois manières d'y entr
 ├── styles.css          # Feuille de style partagée
 ├── script.js           # i18n FR/EN + nav mobile + a11y + interactions
 ├── vercel.json         # Config de déploiement Vercel
-├── favicon.svg         # Favicon vectoriel (mark "V.")
+├── favicon.svg         # Favicon vectoriel (mark "R.")
 ├── favicon-32.png      # Fallback favicon
 ├── apple-touch-icon.png
 ├── icon-512.png
@@ -29,11 +29,11 @@ Site 100% statique (HTML + CSS + JS vanilla, aucune dépendance, aucun build).
 ## ⚠️ À FAIRE AVANT MISE EN LIGNE
 
 1. **Domaine.** Toutes les URL absolues (`canonical`, `hreflang`, `og:url`, `og:image`)
-   utilisent le placeholder `https://vitrine.gostrawberryprod.com`.
+   utilisent le placeholder `https://radar.gostrawberryprod.com`.
    Remplacer par le domaine réel dans les 4 pages HTML avant déploiement :
    ```bash
-   grep -rl "vitrine.gostrawberryprod.com" *.html
-   # puis sed -i 's#https://vitrine.gostrawberryprod.com#https://TON-DOMAINE#g' *.html
+   grep -rl "radar.gostrawberryprod.com" *.html
+   # puis sed -i 's#https://radar.gostrawberryprod.com#https://TON-DOMAINE#g' *.html
    ```
 2. **Checkout / capture email.** Les boutons "S'abonner" et "Obtenir l'Arsenal" pointent
    encore vers `href="#"`. Aucun Stripe ni capture email n'a été câblé (hors périmètre de
@@ -56,4 +56,4 @@ correspondante. Les couleurs et polices sont centralisées en haut de `styles.cs
 
 Les analyses de marques (Sézane, Typology, Qonto, Asphalte, Diptyque, Big Mamma, La Vie,
 Le Slip Français) sont des lectures de positionnement indépendantes et éditoriales, basées
-sur des éléments publics. VITRINE n'est affilié à aucune de ces marques.
+sur des éléments publics. RADAR n'est affilié à aucune de ces marques.

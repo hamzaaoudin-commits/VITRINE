@@ -1,5 +1,5 @@
 /* =========================================================
-   VITRINE — script.js
+   RADAR — script.js
    i18n (FR/EN) + nav mobile + a11y + interactions
    ========================================================= */
 
@@ -16,23 +16,23 @@
     "nav.cta":          { fr: "S'abonner",      en: "Subscribe" },
 
     // TITLES + META DESCRIPTIONS (per page)
-    "title.index":      { fr: "VITRINE — La lecture du marché, chaque semaine", en: "VITRINE — The read on the market, every week" },
-    "meta.index":       { fr: "Un abonnement où chaque semaine une marque réelle est disséquée : ce qui marche, ce qui est flou, comment la repositionner. Un radar de positionnement, pas un cours.", en: "A subscription where every week a real brand is dissected: what works, what's blurry, how to reposition it. Positioning radar, not a course." },
-    "title.library":    { fr: "Bibliothèque — VITRINE", en: "Library — VITRINE" },
-    "meta.library":     { fr: "La bibliothèque cumulée des fiches VITRINE, marques réelles décortiquées, triable par secteur.", en: "The cumulative library of VITRINE sheets, real brands taken apart, sortable by sector." },
-    "title.method":     { fr: "Méthode — VITRINE", en: "Method — VITRINE" },
-    "meta.method":      { fr: "La grille de lecture utilisée dans chaque fiche VITRINE, déroulée sur des cas réels.", en: "The reading grid used in every VITRINE sheet, worked through on real cases." },
-    "title.pricing":    { fr: "Abonnement — VITRINE", en: "Pricing — VITRINE" },
-    "meta.pricing":     { fr: "S'abonner à VITRINE : une fiche d'analyse de marque par semaine, 15 à 25€ par mois. Sans engagement.", en: "Subscribe to VITRINE: one brand-analysis sheet per week, €15 to €25 a month. No commitment." },
-    "title.404":        { fr: "Page introuvable — VITRINE", en: "Page not found — VITRINE" },
+    "title.index":      { fr: "RADAR — La lecture du marché, chaque jour", en: "RADAR — The read on the market, every day" },
+    "meta.index":       { fr: "Un abonnement où chaque jour une marque réelle est disséquée : ce qui marche, ce qui est flou, comment la repositionner. Un radar de positionnement, pas un cours.", en: "A subscription where every day a real brand is dissected: what works, what's blurry, how to reposition it. Positioning radar, not a course." },
+    "title.library":    { fr: "Bibliothèque — RADAR", en: "Library — RADAR" },
+    "meta.library":     { fr: "La bibliothèque cumulée des fiches RADAR, marques réelles décortiquées, triable par secteur.", en: "The cumulative library of RADAR sheets, real brands taken apart, sortable by sector." },
+    "title.method":     { fr: "Méthode — RADAR", en: "Method — RADAR" },
+    "meta.method":      { fr: "La grille de lecture utilisée dans chaque fiche RADAR, déroulée sur des cas réels.", en: "The reading grid used in every RADAR sheet, worked through on real cases." },
+    "title.pricing":    { fr: "Abonnement — RADAR", en: "Pricing — RADAR" },
+    "meta.pricing":     { fr: "S'abonner à RADAR : une fiche d'analyse de marque par jour, 15 à 25€ par mois. Sans engagement.", en: "Subscribe to RADAR: one brand-analysis sheet per day, €15 to €25 a month. No commitment." },
+    "title.404":        { fr: "Page introuvable — RADAR", en: "Page not found — RADAR" },
 
     // INDEX
     "idx.kicker1":      { fr: "Une publication de Strawberry Production", en: "A Strawberry Production publication" },
-    "idx.kicker2":      { fr: "Paris — édition hebdomadaire", en: "Paris — weekly edition" },
+    "idx.kicker2":      { fr: "Paris — édition quotidienne", en: "Paris — daily edition" },
     "idx.h1":           { fr: "Ce que je vois<br>quand je regarde<br>une marque.", en: "What I see<br>when I look at<br>a brand." },
-    "idx.baseline":     { fr: "Chaque semaine, une marque réelle disséquée en public — ce qui marche, ce qui est flou, comment je la repositionnerais. Ce n'est pas un cours : c'est un radar. La lecture du marché que tes concurrents n'ont pas, semaine après semaine.", en: "Every week, a real brand dissected in public — what works, what's blurry, how I'd reposition it. This isn't a course: it's radar. The read on the market your competitors don't have, week after week." },
+    "idx.baseline":     { fr: "Chaque jour, une marque réelle disséquée en public — ce qui marche, ce qui est flou, comment je la repositionnerais. Ce n'est pas un cours : c'est un radar. La lecture du marché que tes concurrents n'ont pas, jour après jour.", en: "Every day, a real brand dissected in public — what works, what's blurry, how I'd reposition it. This isn't a course: it's radar. The read on the market your competitors don't have, day after day." },
     "idx.cta1":         { fr: "S'abonner — 15€/mois", en: "Subscribe — €15/mo" },
-    "idx.cta2":         { fr: "Voir la fiche de la semaine", en: "See this week's sheet" },
+    "idx.cta2":         { fr: "Voir la fiche du jour", en: "See today's sheet" },
 
     "idx.cube.f1.tag":  { fr: "Secteur", en: "Sector" },
     "idx.cube.f1":      { fr: "DNVB", en: "DNVB" },
@@ -50,12 +50,12 @@
     "idx.s1.num":       { fr: "01", en: "01" },
     "idx.s1.title":     { fr: "Le principe", en: "The principle" },
     "idx.s1.l1":        { fr: "Ce n'est pas un blog", en: "This isn't a blog" },
-    "idx.s1.p1":        { fr: "VITRINE n'enseigne rien frontalement. C'est une écoute du marché en direct : chaque fiche analyse une marque publique, pas un client, avec la même grille que celle utilisée pour les case studies Strawberry.", en: "VITRINE doesn't teach anything head-on. It's a live read of the market: each sheet analyzes a public brand, never a client, using the same grid as Strawberry's case studies." },
+    "idx.s1.p1":        { fr: "RADAR n'enseigne rien frontalement. C'est une écoute du marché en direct : chaque fiche analyse une marque publique, pas un client, avec la même grille que celle utilisée pour les case studies Strawberry.", en: "RADAR doesn't teach anything head-on. It's a live read of the market: each sheet analyzes a public brand, never a client, using the same grid as Strawberry's case studies." },
     "idx.s1.l2":        { fr: "Ce que ça installe", en: "What it installs" },
     "idx.s1.p2":        { fr: "Un radar qui ne s'éteint plus. À mesure que la bibliothèque s'épaissit, tu lis le positionnement d'une marque en quelques secondes — là où le marché met des mois. Ce n'est pas un savoir qu'on termine ; c'est un angle mort en moins, à vie.", en: "A radar that never switches off. As the library thickens, you read a brand's positioning in seconds — where the market takes months. It's not knowledge you finish; it's one blind spot fewer, for good." },
 
     "idx.s2.num":       { fr: "02", en: "02" },
-    "idx.s2.title":     { fr: "La fiche de la semaine", en: "This week's sheet" },
+    "idx.s2.title":     { fr: "La fiche du jour", en: "Today's sheet" },
     "idx.s2.p":         { fr: "Format fixe, lecture courte. La structure ne change jamais — seule la marque change. Celle-ci est en accès libre.", en: "Fixed format, short read. The structure never changes — only the brand does. This one is free to read." },
 
     "idx.s3.num":       { fr: "03", en: "03" },
@@ -82,25 +82,25 @@
     // STRAWBERRY BRIDGE (shared)
     "bridge.kicker":    { fr: "En privé", en: "In private" },
     "bridge.title":     { fr: "Cette lecture, sur ta marque.", en: "This read, on your brand." },
-    "bridge.p":         { fr: "VITRINE dissèque des marques publiques. Quand c'est la tienne, ça se passe en commission privée : Strawberry Production applique la même méthode S.T.R.A.W. en profondeur — audit, repositionnement, direction de marque.", en: "VITRINE dissects public brands. When it's yours, it happens under private commission: Strawberry Production applies the same S.T.R.A.W. method in depth — audit, repositioning, brand direction." },
+    "bridge.p":         { fr: "RADAR dissèque des marques publiques. Quand c'est la tienne, ça se passe en commission privée : Strawberry Production applique la même méthode S.T.R.A.W. en profondeur — audit, repositionnement, direction de marque.", en: "RADAR dissects public brands. When it's yours, it happens under private commission: Strawberry Production applies the same S.T.R.A.W. method in depth — audit, repositioning, brand direction." },
     "bridge.cta":       { fr: "Travailler avec Strawberry →", en: "Work with Strawberry →" },
 
     // DISCLAIMER
-    "disclaimer":       { fr: "Analyses indépendantes. VITRINE n'est lié à aucune des marques citées, qui n'ont pas commandé ces lectures.", en: "Independent analyses. VITRINE is not affiliated with any brand mentioned; none commissioned these reads." },
+    "disclaimer":       { fr: "Analyses indépendantes. RADAR n'est lié à aucune des marques citées, qui n'ont pas commandé ces lectures.", en: "Independent analyses. RADAR is not affiliated with any brand mentioned; none commissioned these reads." },
 
     // FOOTER
     "footer.brand":     { fr: "Strawberry Production", en: "Strawberry Production" },
-    "footer.tag":       { fr: "VITRINE — base de données d'analyses de marques", en: "VITRINE — brand analysis database" },
+    "footer.tag":       { fr: "RADAR — base de données d'analyses de marques", en: "RADAR — brand analysis database" },
 
     // LIBRARY PAGE
     "lib.kicker1":      { fr: "Bibliothèque", en: "Library" },
     "lib.kicker2":      { fr: "Triable par secteur", en: "Sortable by sector" },
     "lib.h1":           { fr: "Chaque marque<br>déjà décortiquée.", en: "Every brand,<br>already taken apart." },
-    "lib.baseline":     { fr: "L'accumulation des fiches forme une bibliothèque consultable. Plus un abonné rejoint tard, plus elle est dense — c'est le cœur de VITRINE.", en: "The accumulation of sheets forms a browsable library. The later a subscriber joins, the denser it is — that's the heart of VITRINE." },
+    "lib.baseline":     { fr: "L'accumulation des fiches forme une bibliothèque consultable. Plus un abonné rejoint tard, plus elle est dense — c'est le cœur de RADAR.", en: "The accumulation of sheets forms a browsable library. The later a subscriber joins, the denser it is — that's the heart of RADAR." },
 
     "lib.s1.num":       { fr: "01", en: "01" },
     "lib.s1.title":     { fr: "Fiche complète — en accès libre", en: "Full sheet — free to read" },
-    "lib.fiche.tag":    { fr: "Fiche n°014 — publiée cette semaine", en: "Sheet No.014 — published this week" },
+    "lib.fiche.tag":    { fr: "Fiche n°014 — publiée aujourd’hui", en: "Sheet No.014 — published today" },
     "libf.verdict.l":   { fr: "Le verdict", en: "The verdict" },
     "libf.verdict.p":   { fr: "Une des marques françaises les mieux tenues de sa génération — à un cheveu de diluer ce qui la rend désirable. Le risque n'est pas la qualité, c'est le rythme.", en: "One of the best-held French brands of its generation — a hair away from diluting what makes it desirable. The risk isn't quality, it's pace." },
 
@@ -138,15 +138,15 @@
 
     "lib.s3.num":       { fr: "03", en: "03" },
     "lib.s3.title":     { fr: "Pourquoi la bibliothèque compose", en: "Why the library compounds" },
-    "lib.s3.p":         { fr: "Un nouvel abonné en mois 12 paie le même prix qu'un abonné du mois 1 — mais reçoit douze fois plus de valeur accumulée. C'est la seule offre de Strawberry Production qui s'épaissit dans le temps : chaque fiche ajoute de la matière à la précédente, et la rétention monte avec l'âge du produit.", en: "A new subscriber in month 12 pays the same price as a month-1 subscriber — but receives twelve times more accumulated value. It's the only Strawberry Production offer that thickens over time: each sheet adds to the last, and retention rises with the product's age." },
+    "lib.s3.p":         { fr: "Un nouvel abonné en mois 12 paie le même prix qu'un abonné du mois 1 — mais reçoit douze fois plus de valeur accumulée. C'est la seule offre de Strawberry Production qui s'épaissit dans le temps : chaque fiche ajoute de la matière à la précédente.", en: "A new subscriber in month 12 pays the same price as a month-1 subscriber — but receives twelve times more accumulated value. It's the only Strawberry Production offer that thickens over time: each sheet adds to the last." },
 
     "lib.cta":          { fr: "Accéder à la bibliothèque complète", en: "Access the full library" },
 
     // METHOD PAGE
     "meth.kicker1":     { fr: "Méthode", en: "Method" },
     "meth.kicker2":     { fr: "La grille de lecture", en: "The reading grid" },
-    "meth.h1":          { fr: "La même grille,<br>appliquée chaque<br>semaine.", en: "The same grid,<br>applied every<br>week." },
-    "meth.baseline":    { fr: "VITRINE n'enseigne rien frontalement. La grille s'installe par répétition : la même structure, sur des marques différentes, semaine après semaine — jusqu'à ce que tu ne puisses plus regarder une marque sans elle.", en: "VITRINE doesn't teach anything head-on. The grid installs itself through repetition: the same structure, on different brands, week after week — until you can't look at a brand without it." },
+    "meth.h1":          { fr: "La même grille,<br>appliquée chaque<br>jour.", en: "The same grid,<br>applied every<br>day." },
+    "meth.baseline":    { fr: "RADAR n'enseigne rien frontalement. La grille s'installe par répétition : la même structure, sur des marques différentes, jour après jour — jusqu'à ce que tu ne puisses plus regarder une marque sans elle.", en: "RADAR doesn't teach anything head-on. The grid installs itself through repetition: the same structure, on different brands, day after day — until you can't look at a brand without it." },
 
     "meth.s1.num":      { fr: "01", en: "01" },
     "meth.s1.title":    { fr: "Trois questions, toujours les mêmes", en: "Three questions, always the same" },
@@ -160,13 +160,13 @@
     "meth.s2.num":      { fr: "02", en: "02" },
     "meth.s2.title":    { fr: "Pourquoi ce format, et pas un autre", en: "Why this format, and not another" },
     "meth.l1":          { fr: "Pas un audit complet", en: "Not a full audit" },
-    "meth.p1":          { fr: "Une fiche VITRINE n'a pas l'exhaustivité d'un audit de marque payant. Elle prend dix minutes à lire et laisse une impression nette — c'est la clarté du regard qui compte, pas la couverture du sujet.", en: "A VITRINE sheet doesn't have the exhaustiveness of a paid brand audit. It takes ten minutes to read and leaves a clear impression — clarity of perspective matters more than coverage." },
+    "meth.p1":          { fr: "Une fiche RADAR n'a pas l'exhaustivité d'un audit de marque payant. Elle prend dix minutes à lire et laisse une impression nette — c'est la clarté du regard qui compte, pas la couverture du sujet.", en: "A RADAR sheet doesn't have the exhaustiveness of a paid brand audit. It takes ten minutes to read and leaves a clear impression — clarity of perspective matters more than coverage." },
     "meth.l2":          { fr: "Pas un cours", en: "Not a course" },
-    "meth.p2":          { fr: "Aucune fiche n'explique la méthode en théorie — et c'est voulu. Un cours se termine ; VITRINE, non. Tu ne « finis » pas la grille : tu la gardes allumée. C'est ce qui la rend indélogeable une fois installée.", en: "No sheet explains the method in theory — by design. A course ends; VITRINE doesn't. You don't 'finish' the grid: you keep it running. That's what makes it impossible to unlearn once it's in." },
+    "meth.p2":          { fr: "Aucune fiche n'explique la méthode en théorie — et c'est voulu. Un cours se termine ; RADAR, non. Tu ne « finis » pas la grille : tu la gardes allumée.", en: "No sheet explains the method in theory — by design. A course ends; RADAR doesn't. You don't 'finish' the grid: you keep it running." },
 
     "meth.s3.num":      { fr: "03", en: "03" },
     "meth.s3.title":    { fr: "D'où vient cette grille", en: "Where this grid comes from" },
-    "meth.s3.p":        { fr: "C'est la même méthodologie que celle utilisée dans les missions Strawberry Production — la méthode S.T.R.A.W., appliquée habituellement à des marques clientes en commission privée. VITRINE l'applique en public, à des marques que vous connaissez déjà, sans qu'aucune d'elles n'ait commandé l'analyse.", en: "It's the same methodology used in Strawberry Production engagements — the S.T.R.A.W. method, normally applied to client brands under private commission. VITRINE applies it in public, to brands you already know, none of which commissioned the analysis." },
+    "meth.s3.p":        { fr: "C'est la même méthodologie que celle utilisée dans les missions Strawberry Production — la méthode S.T.R.A.W., appliquée habituellement à des marques clientes en commission privée. RADAR l'applique en public, à des marques que vous connaissez déjà, sans qu'aucune d'elles n'ait commandé l'analyse.", en: "It's the same methodology used in Strawberry Production engagements — the S.T.R.A.W. method, normally applied to client brands under private commission. RADAR applies it in public, to brands you already know, none of which commissioned the analysis." },
 
     // METHOD — CASE STUDIES (section 04)
     "meth.s4.num":      { fr: "04", en: "04" },
@@ -202,10 +202,10 @@
     "pr.s1.num":        { fr: "01", en: "01" },
     "pr.s1.title":      { fr: "Le tarif", en: "Pricing" },
     "pr.badge":         { fr: "Prix fondateur — 50 places", en: "Founder price — 50 spots" },
-    "pr.label":         { fr: "VITRINE", en: "VITRINE" },
+    "pr.label":         { fr: "RADAR", en: "RADAR" },
     "pr.amount.sub":    { fr: "/ mois", en: "/ month" },
     "pr.note":          { fr: "Tarif standard ensuite : 25€/mois. Verrouillé à vie pour les 50 premiers abonnés.", en: "Standard price afterwards: €25/month. Locked in for life for the first 50 subscribers." },
-    "pr.f1":            { fr: "Une fiche d'analyse par semaine", en: "One analysis sheet per week" },
+    "pr.f1":            { fr: "Une fiche d'analyse par jour", en: "One analysis sheet per day" },
     "pr.f2":            { fr: "Accès complet à la bibliothèque cumulée", en: "Full access to the cumulative library" },
     "pr.f3":            { fr: "Filtrage par secteur", en: "Sector filtering" },
     "pr.f4":            { fr: "Sans engagement, résiliable à tout moment", en: "No commitment, cancel anytime" },
@@ -213,20 +213,20 @@
 
     "pr.s2.num":        { fr: "04", en: "04" },
     "pr.s2.title":      { fr: "Ce que vous recevez", en: "What you get" },
-    "pr.r1":            { fr: "Une nouvelle fiche chaque semaine, livrée par email et disponible dans la bibliothèque en ligne.", en: "A new sheet every week, delivered by email and available in the online library." },
+    "pr.r1":            { fr: "Une nouvelle fiche chaque jour, livrée par email et disponible dans la bibliothèque en ligne.", en: "A new sheet every day, delivered by email and available in the online library." },
     "pr.r2":            { fr: "L'accès rétroactif à toutes les fiches déjà publiées, dès le premier jour d'abonnement.", en: "Retroactive access to every sheet already published, from day one of your subscription." },
-    "pr.r3":            { fr: "Une bibliothèque triable par secteur, qui s'épaissit chaque semaine sans surcoût.", en: "A library sortable by sector, thickening every week at no extra cost." },
+    "pr.r3":            { fr: "Une bibliothèque triable par secteur, qui s'épaissit chaque jour sans surcoût.", en: "A library sortable by sector, thickening every day at no extra cost." },
 
     "pr.s3.num":        { fr: "05", en: "05" },
     "pr.s3.title":      { fr: "Questions fréquentes", en: "Frequently asked questions" },
     "pr.q1":            { fr: "Les marques analysées sont-elles mes clients ?", en: "Are the brands analyzed my clients?" },
-    "pr.a1":            { fr: "Non. VITRINE analyse exclusivement des marques publiques, jamais des clients de Strawberry Production. C'est une écoute du marché, pas un audit commandé.", en: "No. VITRINE only analyzes public brands, never Strawberry Production clients. It's a read on the market, not a commissioned audit." },
+    "pr.a1":            { fr: "Non. RADAR analyse exclusivement des marques publiques, jamais des clients de Strawberry Production. C'est une écoute du marché, pas un audit commandé.", en: "No. RADAR only analyzes public brands, never Strawberry Production clients. It's a read on the market, not a commissioned audit." },
     "pr.q2":            { fr: "Puis-je suggérer une marque à analyser ?", en: "Can I suggest a brand to analyze?" },
     "pr.a2":            { fr: "Oui, les abonnés peuvent proposer des marques. La sélection finale reste éditoriale, pour garder une diversité de secteurs dans la bibliothèque.", en: "Yes, subscribers can suggest brands. Final selection stays editorial, to keep a diversity of sectors in the library." },
     "pr.q3":            { fr: "Que se passe-t-il si je résilie ?", en: "What happens if I cancel?" },
     "pr.a3":            { fr: "Vous perdez l'accès à la bibliothèque à la fin de la période déjà payée. Le prix fondateur n'est pas garanti en cas de réabonnement ultérieur.", en: "You lose access to the library at the end of the period already paid for. The founder price isn't guaranteed if you resubscribe later." },
-    "pr.q4":            { fr: "Le rythme est-il vraiment hebdomadaire ?", en: "Is the pace really weekly?" },
-    "pr.a4":            { fr: "L'objectif est une fiche par semaine, avec une tolérance annoncée à l'avance en cas de cadence ajustée à deux semaines.", en: "The goal is one sheet per week, with advance notice if the pace ever shifts to every two weeks." },
+    "pr.q4":            { fr: "Le rythme est-il vraiment quotidien ?", en: "Is the pace really daily?" },
+    "pr.a4":            { fr: "L'objectif est une fiche chaque jour ouvré, avec une tolérance annoncée à l'avance en cas de cadence ajustée.", en: "The goal is one sheet every business day, with advance notice if the pace ever needs to adjust." },
 
     // 404
     "nf.kicker1":       { fr: "Erreur 404", en: "Error 404" },
@@ -236,7 +236,7 @@
     "nf.cta1":          { fr: "Retour à l'accueil", en: "Back to home" },
     "nf.cta2":          { fr: "Voir la bibliothèque", en: "See the library" },
 
-    // ===== L'ARSENAL (toolkit intégré à l'offre VITRINE) =====
+    // ===== L'ARSENAL (toolkit intégré à l'offre RADAR) =====
     "nav.arsenal":      { fr: "L'Arsenal", en: "The Arsenal" },
     "ars.brand":        { fr: "L'Arsenal", en: "The Arsenal" },
 
@@ -245,8 +245,8 @@
     "idx.s4.title":     { fr: "L'offre, en trois temps", en: "The offer, in three moves" },
     "idx.s4.p":         { fr: "Un même regard, trois manières d'y entrer — du plus léger au plus engageant. Rien de dilué : une seule méthode, S.T.R.A.W., déclinée selon ce dont tu as besoin.", en: "One eye, three ways in — from the lightest to the most committed. Nothing diluted: a single method, S.T.R.A.W., in the form you need." },
     "idx.ladder1.k":    { fr: "01 · Le regard", en: "01 · The eye" },
-    "idx.ladder1.t":    { fr: "VITRINE — l'abonnement", en: "VITRINE — the subscription" },
-    "idx.ladder1.p":    { fr: "Une marque disséquée chaque semaine. Le radar qui s'installe et ne s'éteint plus.", en: "A brand dissected every week. The radar that installs itself and never switches off." },
+    "idx.ladder1.t":    { fr: "RADAR — l'abonnement", en: "RADAR — the subscription" },
+    "idx.ladder1.p":    { fr: "Une marque disséquée chaque jour. Le radar qui s'installe et ne s'éteint plus.", en: "A brand dissected every day. The radar that installs itself and never switches off." },
     "idx.ladder1.price": { fr: "15€ / mois", en: "€15 / mo" },
     "idx.ladder2.k":    { fr: "02 · Les instruments", en: "02 · The instruments" },
     "idx.ladder2.t":    { fr: "L'Arsenal — le toolkit", en: "The Arsenal — the toolkit" },
@@ -261,7 +261,7 @@
     // METHOD — section L'Arsenal (les instruments)
     "meth.s5.num":      { fr: "05", en: "05" },
     "meth.s5.title":    { fr: "L'Arsenal — les instruments", en: "The Arsenal — the instruments" },
-    "meth.s5.lead":     { fr: "VITRINE entraîne l'œil par répétition. L'Arsenal, lui, te met la structure entre les mains : les cinq instruments exacts que j'utilise en commission, pour faire tourner la grille sur ta propre marque. L'un sans l'autre est incomplet — l'œil sans structure hésite, la structure sans œil s'applique à l'aveugle.", en: "VITRINE trains the eye through repetition. The Arsenal puts the structure in your hands: the five exact instruments I use in commissions, to run the grid on your own brand. Either without the other is incomplete — the eye without structure hesitates, structure without the eye applies itself blind." },
+    "meth.s5.lead":     { fr: "RADAR entraîne l'œil par répétition. L'Arsenal, lui, te met la structure entre les mains : les cinq instruments exacts que j'utilise en commission, pour faire tourner la grille sur ta propre marque. L'un sans l'autre est incomplet — l'œil sans structure hésite, la structure sans œil s'applique à l'aveugle.", en: "RADAR trains the eye through repetition. The Arsenal puts the structure in your hands: the five exact instruments I use in commissions, to run the grid on your own brand. Either without the other is incomplete — the eye without structure hesitates, structure without the eye applies itself blind." },
     "ars.m1.t":         { fr: "Differentiation Diagnostic", en: "Differentiation Diagnostic" },
     "ars.m1.d":         { fr: "Isoler ce qui distingue réellement la marque.", en: "Isolate what actually sets the brand apart." },
     "ars.m2.t":         { fr: "Narrative Platform", en: "Narrative Platform" },
@@ -271,14 +271,14 @@
     "ars.m4.t":         { fr: "Deployment Kit", en: "Deployment Kit" },
     "ars.m4.d":         { fr: "Déploiement sur les supports.", en: "Deployment across touchpoints." },
     "ars.m5.t":         { fr: "Coherence Guide", en: "Coherence Guide" },
-    "ars.m5.d":         { fr: "Cohérence globale — le verrou stratégique, volontairement incomplet sur l'extraction de la singularité (la part non-automatisable de la méthode).", en: "Global coherence — the strategic lock, deliberately incomplete on extracting singularity (the non-automatable part of the method)." },
+    "ars.m5.d":         { fr: "Cohérence globale — la vérification finale avant déploiement.", en: "Global coherence — the final check before deployment." },
     "ars.deal.l":       { fr: "Ce que ça transmet", en: "What it transmits" },
-    "ars.deal.p":       { fr: "La structure exacte suivie en commission : frameworks, cas anonymisés, questions d'onboarding. Pas l'œil — ça, c'est VITRINE qui l'installe, semaine après semaine.", en: "The exact structure followed in commissions: frameworks, anonymized cases, onboarding questions. Not the eye — that's what VITRINE installs, week after week." },
+    "ars.deal.p":       { fr: "La structure exacte suivie en commission : frameworks, cas anonymisés, questions d'onboarding. Pas l'œil — ça, c'est RADAR qui l'installe, jour après jour.", en: "The exact structure followed in commissions: frameworks, anonymized cases, onboarding questions. Not the eye — that's what RADAR installs, day after day." },
     "meth.s5.cta":      { fr: "Obtenir l'Arsenal →", en: "Get the Arsenal →" },
 
     // PRICING — l'échelle complète
     "pr.h1b":           { fr: "Entrer dans<br>la méthode.", en: "Step into<br>the method." },
-    "pr.baseline2":     { fr: "Trois manières d'entrer, une seule méthode. Du radar hebdomadaire à l'exécution complète — sans jamais diluer.", en: "Three ways in, one method. From the weekly radar to full execution — never diluted." },
+    "pr.baseline2":     { fr: "Trois manières d'entrer, une seule méthode. Du radar quotidien à l'exécution complète — sans jamais diluer.", en: "Three ways in, one method. From the daily radar to full execution — never diluted." },
 
     "pr.ars.num":       { fr: "02", en: "02" },
     "pr.ars.title":     { fr: "L'Arsenal — le toolkit", en: "The Arsenal — the toolkit" },
@@ -294,7 +294,6 @@
     "pr.ars.t2.f3":     { fr: "Accès aux mises à jour du toolkit", en: "Access to toolkit updates" },
     "pr.ars.t2.f4":     { fr: "Format Notion + PDF + Figma (option visuelle)", en: "Notion + PDF + Figma format (visual option)" },
     "pr.ars.buy":       { fr: "Obtenir l'Arsenal", en: "Get the Arsenal" },
-    "pr.ars.note":      { fr: "Le module 5 reste volontairement incomplet sur l'extraction de la singularité — la seule part que ni le toolkit ni personne d'autre que l'œil ne peut automatiser.", en: "Module 5 stays deliberately incomplete on extracting singularity — the one part neither the toolkit nor anyone but the eye can automate." },
 
     "pr.str.num":       { fr: "03", en: "03" },
     "pr.str.title":     { fr: "Strawberry — la commission", en: "Strawberry — the commission" },
@@ -305,8 +304,8 @@
     "pr.str.f3":        { fr: "Commissions limitées par trimestre", en: "Commissions limited per quarter" },
     "pr.str.cta":       { fr: "Travailler avec Strawberry →", en: "Work with Strawberry →" },
 
-    "pr.q5":            { fr: "Quelle différence entre l'abonnement VITRINE et l'Arsenal ?", en: "What's the difference between the VITRINE subscription and the Arsenal?" },
-    "pr.a5":            { fr: "VITRINE, c'est le regard : une marque disséquée chaque semaine, pour installer la grille dans ton œil. L'Arsenal, c'est la structure : les instruments pour faire tourner cette grille sur ta propre marque, quand tu veux. L'abonnement forme le réflexe ; le toolkit donne l'outil. Beaucoup prennent les deux.", en: "VITRINE is the eye: a brand dissected every week, to install the grid in your eye. The Arsenal is the structure: the instruments to run that grid on your own brand, whenever you want. The subscription builds the reflex; the toolkit gives the tool. Many take both." },
+    "pr.q5":            { fr: "Quelle différence entre l'abonnement RADAR et l'Arsenal ?", en: "What's the difference between the RADAR subscription and the Arsenal?" },
+    "pr.a5":            { fr: "RADAR, c'est le regard : une marque disséquée chaque jour, pour installer la grille dans ton œil. L'Arsenal, c'est la structure : les instruments pour faire tourner cette grille sur ta propre marque, quand tu veux. L'abonnement forme le réflexe ; le toolkit donne l'outil. Beaucoup prennent les deux.", en: "RADAR is the eye: a brand dissected every day, to install the grid in your eye. The Arsenal is the structure: the instruments to run that grid on your own brand, whenever you want. The subscription builds the reflex; the toolkit gives the tool. Many take both." },
 
     // A11Y
     "a11y.menu":        { fr: "Ouvrir le menu", en: "Open menu" },
@@ -320,14 +319,14 @@
   function getLang() {
     const p = new URLSearchParams(window.location.search).get("lang");
     if (p && LANGS.includes(p)) return p;
-    const s = localStorage.getItem("vitrine_lang");
+    const s = localStorage.getItem("radar_lang");
     if (s && LANGS.includes(s)) return s;
     return "fr";
   }
 
   function setLang(lang) {
     if (!LANGS.includes(lang)) lang = "fr";
-    localStorage.setItem("vitrine_lang", lang);
+    localStorage.setItem("radar_lang", lang);
     document.documentElement.setAttribute("lang", lang);
 
     // texte visible
@@ -424,12 +423,73 @@
     });
   }
 
-  /* ---------- 6. INIT ---------- */
+  /* ---------- 6. FIL DE SIGNAL (narration au scroll) ----------
+     Rail fixe en marge (grands écrans) qui trace la progression
+     dans la page comme un signal radar, section par section. */
+  function initSignalRail() {
+    const sections = Array.from(document.querySelectorAll(".sec")).filter(s => s.querySelector(".sec-num"));
+    if (sections.length < 3 || !("IntersectionObserver" in window)) return;
+
+    const rail = document.createElement("nav");
+    rail.className = "signal-rail";
+    rail.setAttribute("aria-label", document.documentElement.getAttribute("lang") === "en" ? "Page sections" : "Sommaire de la page");
+
+    const track = document.createElement("div");
+    track.className = "rail-track";
+    const fill = document.createElement("div");
+    fill.className = "rail-fill";
+    track.appendChild(fill);
+    rail.appendChild(track);
+
+    const entries = sections.map(sec => {
+      const num = sec.querySelector(".sec-num").textContent.trim();
+      const titleEl = sec.querySelector(".sec-title");
+      const title = titleEl ? titleEl.textContent.trim() : num;
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.textContent = num;
+      btn.setAttribute("aria-label", title);
+      btn.addEventListener("click", () => {
+        sec.scrollIntoView({ behavior: REDUCE ? "auto" : "smooth", block: "start" });
+      });
+      rail.appendChild(btn);
+      return { sec, btn };
+    });
+
+    document.body.appendChild(rail);
+
+    const io = new IntersectionObserver((obs) => {
+      obs.forEach(entry => {
+        const match = entries.find(e => e.sec === entry.target);
+        if (!match || !entry.isIntersecting) return;
+        entries.forEach(e => e.btn.classList.remove("active"));
+        match.btn.classList.add("active");
+      });
+    }, { threshold: 0.5, rootMargin: "-15% 0px -50% 0px" });
+    sections.forEach(s => io.observe(s));
+
+    const startY = sections[0].offsetTop;
+    const last = sections[sections.length - 1];
+    const endY = last.offsetTop + last.offsetHeight;
+
+    function updateFill() {
+      const mid = window.scrollY + window.innerHeight / 2;
+      let pct = (mid - startY) / Math.max(1, endY - startY);
+      pct = Math.max(0, Math.min(1, pct));
+      fill.style.height = (pct * 100) + "%";
+    }
+    window.addEventListener("scroll", updateFill, { passive: true });
+    window.addEventListener("resize", updateFill);
+    updateFill();
+  }
+
+  /* ---------- 7. INIT ---------- */
   document.addEventListener("DOMContentLoaded", () => {
     initLangToggle();
     initMobileNav();
     initReveal();
     initTilt();
+    initSignalRail();
   });
 
 })();
